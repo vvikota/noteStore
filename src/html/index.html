@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <title>Music portal</title>
+  <link rel="stylesheet" type="text/css" href="./libs/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./libs/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="./libs/JQUI/jquery-ui.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="body-wrapper">
+    <section class="portal-nav portal-nav--mobile">
+      <div class="nav-wrapper">
+        <div class="nav--mobile-top-block">
+          <span class="nav-icon"></span>
+          <button class="close-mobile-menu"></button>
+        </div>
+        <div class="tablet-menu-registration">
+          <button class="entry">Вход</button>
+          <button class="registration">Регистрация</button>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="./musicians.html">Музыканты</a></li>
+            <li><a href="#">Аранжировки</a></li>
+            <li><a href="#">Жанры</a></li>
+            <li><a href="#">Нотные наборы</a></li>
+          </ul>
+        </nav>
+        <div class="custom-nav">
+          <a href="#" class="note-order-link">Заказать ноты</a>
+          <a href="#" class="market-link">Магазин музыкальных инструментов</a>
+        </div>
+        <div class="language-change-block">
+          <p>Страна/Валюта</p>
+          <button class="language-change language-change--tablet"></button>
+        </div>
+      </div>
+
+      <div class="language-change-menu language-change-menu--mobile">
+        <div class="language-change-list">
+          <h4>Язык</h4>
+
+          <label>
+            <input type="radio" name="language" value="rus" checked>
+            <p class="input-text rus"> Русский </p>
+          </label>
+
+          <label>
+            <input type="radio" name="language" value="eng">
+            <p class="input-text eng"> English </p>
+          </label>
+
+          <label>
+            <input type="radio" name="language" value="fr">
+            <p class="input-text fr"> Français</p>
+          </label>
+
+          <label>
+            <input type="radio" name="language" value="deu">
+            <p class="input-text deu"> Deutsch</p>
+          </label>
+
+          <label>
+            <input type="radio" name="language" value="esp">
+            <p class="input-text esp"> Español</p>
+          </label>
+
+        </div>
+        <div class="currency-change-list">
+          <h4>Валюта</h4>
+
+          <label>
+            <input type="radio" name="currency" value="rub" checked>
+            <p class="input-text rub"> Рубль РФ</p>
+          </label>
+
+          <label>
+            <input type="radio" name="currency" value="doll">
+            <p class="input-text doll"> Доллар США</p>
+          </label>
+
+          <label>
+            <input type="radio" name="currency" value="funt">
+            <p class="input-text funt"> Английский фунт</p>
+          </label>
+
+          <label>
+            <input type="radio" name="currency" value="euro">
+            <p class="input-text euro"> Евро</p>
+          </label>
+        </div>
+      </div>
+
+      <div class="header-tel header-tel--menu">
+        Поддержка:
+        <a href="tel:+74952680496">+7 (495) 268-04-96</a>
+      </div>
+
+    </section>
+
+    <header>
+      <section class="header-contact">
+        <div class="wrapper wrapper--flex">
+          <div class="header-tel">
+            Поддержка:
+            <a href="tel:+74952680496">+7 (495) 268-04-96</a>
+          </div>
+          <div class="header-social-link">
+            <p>Напишите нам</p>
+            <a href="#" class="social-link-whats"></a>
+            <a href="#" class="social-link-telegram"></a>
+            <a href="#" class="social-link-vk"></a>
+            <button class="social-link-arrow"></button>
+            <div class="hidden-social-link">
+              <div class="link-container">
+                <a href="#" class="social-link-viber"></a>
+                <a href="#" class="social-link-facebook"></a>
+                <a href="#" class="social-link-gplus"></a>
+                <a href="#" class="social-link-skype"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="header-content">
+        <div class="wrapper wrapper--flex">
+          <div class="header-content-left">
+            <a class="logo logo--header">
+              <img src="./img/logo.png" alt="logo">
+            </a>
+            <label class="header-content-label">
+              <input type="text" name="search-input" class="header-content-input"
+                placeholder="Поиск по нотам, музыкантам, жанрам">
+              <ul class="search-hint search-hint--header">
+                <li>Bob Marley</li>
+                <li>Limp Bizkit</li>
+                <li>Linkin Park</li>
+                <li>Metalica</li>
+                <li>Pink Floyd</li>
+              </ul>
+              <button class="search-button"></button>
+            </label>
+
+          </div>
+          <div class="header-content-setting">
+            <button class="language-change language-change--desktop"></button>
+            <div class="language-change-menu language-change-menu--desktop">
+              <div class="language-change-list">
+                <h4>Язык</h4>
+
+                <label>
+                  <input type="radio" name="language" value="rus" checked>
+                  <p class="input-text rus"> Русский </p>
+                </label>
+
+                <label>
+                  <input type="radio" name="language" value="eng">
+                  <p class="input-text eng"> English </p>
+                </label>
+
+                <label>
+                  <input type="radio" name="language" value="fr">
+                  <p class="input-text fr"> Français</p>
+                </label>
+
+                <label>
+                  <input type="radio" name="language" value="deu">
+                  <p class="input-text deu"> Deutsch</p>
+                </label>
+
+                <label>
+                  <input type="radio" name="language" value="esp">
+                  <p class="input-text esp"> Español</p>
+                </label>
+
+              </div>
+              <div class="currency-change-list">
+                <h4>Валюта</h4>
+
+                <label>
+                  <input type="radio" name="currency" value="rub" checked>
+                  <p class="input-text rub"> Рубль РФ</p>
+                </label>
+
+                <label>
+                  <input type="radio" name="currency" value="doll">
+                  <p class="input-text doll"> Доллар США</p>
+                </label>
+
+                <label>
+                  <input type="radio" name="currency" value="funt">
+                  <p class="input-text funt"> Английский фунт</p>
+                </label>
+
+                <label>
+                  <input type="radio" name="currency" value="euro">
+                  <p class="input-text euro"> Евро</p>
+                </label>
+              </div>
+            </div>
+            <div class="header-content-registration">
+              <button class="entry">Вход</button>
+              <button class="registration">Регистрация</button>
+            </div>
+            <div class="header-content-basket not-empty">
+              <p>5</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portal-nav portal-nav--desktop">
+        <div class="nav-wrapper">
+
+          <nav>
+            <ul>
+              <li><a href="./musicians.html">Музыканты</a></li>
+              <li><a href="#">Аранжировки</a></li>
+              <li><a href="#">Жанры</a></li>
+              <li><a href="#">Нотные наборы</a></li>
+            </ul>
+          </nav>
+
+          <div class="custom-nav">
+            <a href="#" class="note-order-link">Заказать ноты</a>
+            <a href="#" class="market-link">Магазин музыкальных инструментов</a>
+          </div>
+
+        </div>
+
+      </section>
+      <button class="nav-toogle"></button>
+      <div class="backdrop"></div>
+
+    </header>
+
+    <main>
+      <section class="main-slider-section">
+        <div class="main-slider wrapper">
+          <a href="#"><img src="./img/main-slider_1.jpg" alt="img_1"></a>
+          <a href="#"><img src="./img/main-slider_2.jpg" alt="img_2"></a>
+          <a href="#"><img src="./img/main-slider_3.jpg" alt="img_3"></a>
+          <a href="#"><img src="./img/main-slider_4.jpg" alt="img_4"></a>
+          <a href="#"><img src="./img/main-slider_3.jpg" alt="img_5"></a>
+        </div>
+      </section>
+ 
+      <section class="music-sets-slider wrapper">
+        <h2>Нотные наборы</h2>
+        <div class="slick-slider-notes">
+          
+          <div class="note-card">
+            <div class="image-block">
+              <a href="#"> <img src="./img/music sets_1.jpg" alt="pic"></a>
+            </div>
+            <div class="note-card-text">
+              <a href="#">
+                <span class="note-card-title">Классика 18 века для скрипки</span>
+              </a>
+              <span class="image-block-price">1 356 руб.</span>
+            </div>
+          </div>
+        
+          <div class="note-card">
+            <div class="image-block">
+              <a href="#"> <img src="./img/music sets_2.jpg" alt="pic"></a>
+            </div>
+            <div class="note-card-text">
+              <a href="#">
+                <span class="note-card-title">Фортепиано для чинающих</span>
+              </a>
+              <span class="image-block-price free">Бесплатно</span>
+            </div>
+          </div>
+        
+          <div class="note-card">
+            <div class="image-block">
+              <a href="#">
+                <img src="./img/music sets_3.jpg" alt="pic">
+              </a>
+            </div>
+            <div class="note-card-text">
+              <a href="#">
+                <span class="note-card-title">Народная музыка России</span>
+              </a>
+              <span class="image-block-price">980 руб.</span>
+            </div>
+          </div>
+         
+          <div class="note-card">
+            <div class="image-block">
+              <a href="#">
+                <img src="./img/music sets_4.jpg" alt="pic">
+              </a>
+            </div>
+            <div class="note-card-text">
+              <a href="#">
+                <span class="note-card-title">Лучшие кантри ноты для банджо</span>
+              </a>
+              <span class="image-block-price">1 705 руб.</span>
+            </div>
+          </div>
+        
+          <div class="note-card">
+            <div class="image-block">
+              <a href="#"><img src="./img/music sets_3.jpg" alt="pic"></a>
+            </div>
+            <div class="note-card-text">
+              <a href="#">
+                <span class="note-card-title">Классика 18 века для скрипки</span>
+              </a>
+              <span class="image-block-price">1 356 руб.</span>
+            </div>
+          </div>
+        
+        </div>
+      </section>
+
+      <section class="notes-list wrapper wrapper--tablet">
+        <div class="notes-list-block">
+          <h2>Популярные ноты</h2>
+
+          <div class="product-card">
+            <a href="#" class="product-card-img"><img src="./img/notes-list-1.jpg" alt="img"></a>
+            <div class="description-block">
+              <a href="#" class="product-name">
+                Michael Giacchino - Theme (from "Spider Man") Original
+                Television Series, 2016
+              </a>
+              <p class="product-instrument"> Вокал и пианино</p>
+              <p class="product-price free">Бесплатно</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#" class="product-card-img"> <img src="./img/notes-list-2.jpg" alt="img"></a>
+            <div class="description-block">
+              <a href="#" class="product-name">
+                The Beatles - Yesterday, 1961
+              </a>
+              <p class="product-instrument">Пианино.Easy</p>
+              <p class="product-price free">Бесплатно</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#" class="product-card-img"> <img src="./img/notes-list-3.jpg" alt="img"></a>
+            <div class="description-block">
+              <a href="#" class="product-name">
+                The Inc Sports - Mayby, 1936
+              </a>
+              <p class="product-instrument">Пианино</p>
+              <p class="product-price">120 руб.</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#" class="product-card-img"><img src="./img/notes-list-4.jpg" alt="img"></a>
+            <div class="description-block">
+              <a href="#" class="product-name">
+                Lynyrd Skynyrd - Gimme Three Steps, 1976
+              </a>
+              <p class="product-instrument">Гитара</p>
+              <p class="product-price">245 руб.</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#" class="product-card-img"> <img src="./img/notes-list-5.jpg" alt="img"></a>
+            <div class="description-block">
+              <a href="#" class="product-name">
+                Louis - The Best Of Louis Armstrong - When You're Smilling, 1951
+              </a>
+              <p class="product-instrument">Пианино. Medium</p>
+              <p class="product-price free">Бесплатно</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="notes-list-block">
+          <h2>Новые поступления</h2>
+
+          <div class="product-card">
+            <a href="#" class="product-card-img"><img src="./img/notes-list-1.jpg" alt="img"></a>
+            <div class="description-block">
+              <a href="#" class="product-name">
+                Michael Giacchino - Theme (from "Spider Man") Original
+                Television Series, 2016
+              </a>
+              <p class="product-instrument"> Вокал и пианино</p>
+              <p class="product-price free">Бесплатно</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#" class="product-card-img"> <img src="./img/notes-list-2.jpg" alt="img"></a>
+            <div class="description-block">
+              <a href="#" class="product-name">
+                The Beatles - Yesterday, 1961
+              </a>
+              <p class="product-instrument">Пианино.Easy</p>
+              <p class="product-price free">Бесплатно</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#" class="product-card-img"> <img src="./img/notes-list-3.jpg" alt="img"></a>
+            <div class="description-block">
+              <a href="#" class="product-name">
+                The Inc Sports - Mayby, 1936
+              </a>
+              <p class="product-instrument">Пианино</p>
+              <p class="product-price">120 руб.</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#" class="product-card-img"><img src="./img/notes-list-4.jpg" alt="img"></a>
+            <div class="description-block">
+              <a href="#" class="product-name">
+                Lynyrd Skynyrd - Gimme Three Steps, 1976
+              </a>
+              <p class="product-instrument">Гитара</p>
+              <p class="product-price">245 руб.</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="#" class="product-card-img"> <img src="./img/notes-list-5.jpg" alt="img"></a>
+            <div class="description-block">
+              <a href="#" class="product-name">
+                Louis - The Best Of Louis Armstrong - When You're Smilling, 1951
+              </a>
+              <p class="product-instrument">Пианино. Medium</p>
+              <p class="product-price free">Бесплатно</p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <section class="footer-top">
+        <div class="wrapper wrapper--flex wrapper--tablet">
+          <div class="footer-top-description">
+            <h2><span>Фоно</span>фактура</h2>
+            <p>Магазин музыкальных инструментов</p>
+            <ul class="advantages-list">
+              <li> Большой выбор музыкальных инструментов</li>
+              <li> Бесплатная доставка в 200 городов России </li>
+              <li> Покупка в рассрочку 0/0/24</li>
+            </ul>
+            <a href="#" class="market-button">Перейти в магазин</a>
+          </div>
+          <div class="footer-top-picture">
+            <img src="./img/footer-img.jpg" alt="footer-pic">
+          </div>
+        </div>
+      </section>
+    
+      <section class="footer-bottom">
+    
+        <div class="footer-nav">
+          <div class="wrapper">
+            <nav>
+              <ul class="footer-main-nav">
+                <li><a href="./musicians.html">Музыканты</a></li>
+                <li><a href="#">Аранжировки</a></li>
+                <li><a href="#">Жанры</a></li>
+                <li><a href="#">Нотные наборы</a></li>
+              </ul>
+            </nav>
+    
+            <div class="footer-right-block">
+              <div class="custom-nav">
+                <a href="#" class="note-order-link--footer">Заказать ноты</a>
+                <a href="#" class="market-link--footer">Магазин музыкальных инструментов</a>
+              </div>
+              <ul class="footer-social-link">
+                <li>
+                  <a href="#" class="footer-link-facebook"></a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link-vk"></a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link-twiter"></a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link-youtube"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="footer-copyright wrapper">
+          <h3>Notestore</h3>
+          <p>© 2017 Notestore.com. Все права защищены.</p>
+          <p class="copyright-politics">   Политика в отношении обработки персональных данных</p>
+        </div>
+      </section>
+     <!-- =include ./component/navMenu.html -->
+    </footer>
+    </div>
+    
+      <script src="./libs/jqerry.js"></script>
+      <script src="./libs/slick/slick.min.js"></script>
+      <script src="./libs/JQUI/jquery-ui.js"></script>
+      <script src="./js/script.js"></script>
+      </body>
+    
+      </html>

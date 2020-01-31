@@ -1,0 +1,520 @@
+
+.musician-card-wrapper{
+  margin: -87px 0 0 -160px;
+  padding-bottom: 38px;
+}
+
+.musician-card{
+  display: flex;
+  float: left;
+  flex-direction: column;
+  margin-left: 160px;
+  margin-top: 87px;
+}
+
+.musician-card-img-wrapper{
+  margin-bottom: 15px;
+}
+
+.musician-card-author{
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5897c4;
+  text-decoration: none;
+}
+
+.musician-card-author:hover{
+  color: #f2547c;
+}
+
+.navigation-block h2,
+.musicians-description h2{
+  font-family: Roboto, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #000000;
+}
+
+.navigation-block{
+  padding-top: 28px;
+  padding-bottom: 23px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.navigation-block-breadcrumbs{
+  font-family: HelveticaNeueCyrRoman, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.navigation-block h2{
+  margin-top: 28px;
+}
+
+.navigation-block-breadcrumbs a{
+  position: relative;
+  padding-right: 16px;
+  color: #5897c4;
+  text-decoration: none;
+}
+
+.navigation-block-breadcrumbs a:after{
+  position: absolute;
+  content: "→";
+  right: 0px;
+  color: #252525;
+}
+
+.navigation-block-breadcrumbs span{
+  color: #252525;
+}
+
+.navigation-block-descriptions{
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 28px;
+  color: #333333;
+}
+
+.navigation-block-link{
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #5897c4;
+}
+
+.sort-block{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.sort-block .wrapper{
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.musicians-search-label{
+  position: relative;
+  display: flex;
+}
+
+.musicians-search-label input,
+.musicians-search-label button,
+.choose-year__button,
+.range-price,
+.only-free-checkbox,
+.sort{
+  display: flex;
+  align-items: center;
+  height: 42px;
+  border: 1px solid #cacaca;
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+.musicians-search-label,
+.choose-year,
+.range-price,
+.only-free-checkbox{
+  margin-right: 5px;
+}
+
+.musicians-search-label input{
+  width: 310px;
+  padding: 6px 13px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #969696;
+}
+
+.musicians-search-label button{
+  width: 47px;
+  background-color: #f7f7f7;
+  background: #f7f7f7 url('../img/search-icon-pink.png') center no-repeat;
+  border-left: none;
+}
+
+.choose-year{
+  position: relative;
+}
+
+.choose-year__button{
+  position: relative;
+  width: 120px;
+  padding-left: 20px;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.choose-year__button:after{
+  position: absolute;
+  content: "";
+  width: 11px;
+  height: 5px;
+  top: 17px;
+  right: 14px;
+  background: url('../img/select-arrow.png') no-repeat;
+}
+
+.range-price{
+  display: flex;
+  justify-content: space-between;
+  width: 503px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.range-price-description{
+  white-space: nowrap;
+}
+
+.range-control-wrapper{
+  display: flex;
+  width: 398px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range-control{
+  width: 76px;
+  height: 26px;
+  padding-left: 9px;
+  box-sizing: border-box;
+  border: 1px solid #cacaca;
+}
+
+.range-price .slider-range{
+  width: 215px;
+  height: 7px;
+  background-color: #e2e2e2;
+  border: none;
+  border-radius: 15px;
+}
+
+.ui-slider-range{
+  background-color: #f25d82;
+  border: none;
+}
+
+.ui-slider .ui-slider-handle{
+  border: none;
+  background: url('../img/ui-slider-handle.png') 2px 1px no-repeat;
+  outline: none;
+  cursor: pointer;
+}
+
+.only-free-checkbox,
+.range-control,
+.range-price-description,
+.sort{
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #212121;
+}
+
+.only-free-checkbox{
+  position: relative;
+  width: 193px;
+  padding-left: 14px;
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+.only-free-checkbox span:before{
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 8px;
+  right: 14px;
+  border: 1px solid #cacaca;
+}
+
+.only-free-checkbox span:after{
+  display: none;
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  top: 11px;
+  right: 17px;
+  font-size: 20px;
+  border: 1px solid #cacaca;
+  background-color: #f2547c;
+  border-radius: 2px;
+}
+
+.only-free-checkbox input:checked + span:after{
+  display: block;
+}
+
+.only-free-checkbox input{
+  display: none;
+}
+
+.sort-block-nav{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.sort-block-nav .wrapper{
+  align-items: center;
+}
+
+.rezults-number{
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #191919;
+}
+
+.sort-wrapper{
+  position: relative;
+}
+
+.sort{
+  position: relative;
+  width: 192px;
+  padding-left: 14px;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.sort:after{
+  position: absolute;
+  content: "";
+  width: 11px;
+  height: 15px;
+  top: 11px;
+  right: 14px;
+  background: url('../img/double-arrow.png') no-repeat;
+}
+
+.musicians-block{
+  padding-top: 40px;
+}
+
+.musicians-block:after,
+.musician-card-wrapper:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.bottom-breadcrumbs{
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.bottom-breadcrumbs .wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.bottom-breadcrumbs .page-link{
+  padding: 10px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #5897c4; 
+}
+
+.bottom-breadcrumbs .curent-page{
+  padding: 10px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #f2547c;
+}
+
+.bottom-breadcrumbs .page-link:first-child{
+  padding-left: 0;
+}
+
+.bottom-breadcrumbs .page-link:last-child{
+  display: block;
+  width: 7px;
+  height: 11px;
+  background: #ffffff url('../img/breadcrumbs-pink-arrow.png') center no-repeat;
+}
+
+.musicians-description{
+  margin-top: 59px;
+  margin-bottom: 116px;
+}
+
+.musicians-description h2{
+  margin-bottom: 33px;
+}
+
+.musicians-description p{
+  font-family: Roboto,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333333;
+}
+
+@media screen and (max-width: 850px) {
+  .sort-block .wrapper{
+    flex-direction: column;
+  }
+
+  .musicians-search-label,
+  .choose-year,
+  .choose-year__button,
+  .range-price,
+  .only-free-checkbox{
+    width: 100%;
+  }
+
+  .musicians-search-label,
+  .choose-year,
+  .range-price,
+  .only-free-checkbox{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .musicians-search-label .search-input-musician{
+    width: calc(100% - 47px);
+  }
+
+  .only-free-checkbox {
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+
+  .navigation-block {
+    padding-top: 23px;
+  }
+
+  .sort-block-nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .musicians-description {
+    margin-top: 38px;
+  }
+
+  .musicians-description{
+    margin-bottom: 75px;
+  }
+}
+
+@media screen and (max-width: 1285px) {
+  .musicians-search-label, .choose-year, .range-price, .only-free-checkbox {
+      margin-bottom: 10px;
+  }
+
+  .sort-block .wrapper{
+    justify-content: flex-start;
+  }
+
+  .musicians-search-label,
+  .choose-year,
+  .range-price,
+  .only-free-checkbox{
+  margin-right: 15px;
+}
+}
+
+@media screen and (max-width: 575px) {
+  .range-price{
+    flex-direction: column;
+    height: 85px;
+    padding: 15px 28px 18px 15px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .navigation-block-descriptions{
+    height: 95px;
+    overflow: hidden;
+  }
+
+  .range-price{
+    height: 118px;
+  }
+
+  .range-control-wrapper{
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 216px;
+  } 
+
+  .range-price-description {
+    align-self: flex-start;
+  }
+
+  .slider-range{
+    margin-top: 19px;
+  }
+
+  .range-control--max{
+    position: absolute;
+    right: 1px;
+  }
+
+  .sort-block-nav .wrapper{
+    flex-direction: column;
+  }
+
+  .rezult-number{
+    margin-bottom: 15px;
+  }
+
+  .sort-wrapper,
+  .sort{
+    width: 100%;
+  }
+
+  .musician-card-img-wrapper img{
+    width: 102px;
+    height: 95px;
+  }
+
+  @media screen and (max-width: 430px) {
+    .musicians-block {
+      padding-top: 20px;
+    }
+
+    .musician-card{
+      flex-direction: row;
+      margin-top: 27px;
+    }
+
+    .musician-card-img-wrapper{
+      margin-bottom: 0;
+    }
+
+    .musician-card-wrapper{
+      margin: -27px 0 0 -160px;
+    }
+
+    .musician-card-author{
+      margin-left: 10px;
+      
+    }
+  } 
+}
+

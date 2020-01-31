@@ -1,0 +1,33 @@
+{
+  "name": "music",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vi",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^2.0.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-include": "^2.4.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "22rw"
+  },
+  "keywords": [
+    "dasd"
+  ],
+  "description": ""
+}
