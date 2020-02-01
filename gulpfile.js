@@ -39,19 +39,35 @@ gulp.task('style', () => {
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 version'],
     }))
-    // .pipe(cssmin())
     .pipe(sourcemaps.write('./'))
-    // .pipe(cssbeautify())
     .pipe(gulp.dest('build/css'))
     .pipe(browserSync.reload({
       stream: true
     }));
 });
 
+// for finish task
+gulp.task('styleFinish', () => {
+  return gulp.src('src/static/styles/style.scss')
+    .pipe(sass())
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 version'],
+    }))
+    // .pipe(cssmin())
+    .pipe(cssbeautify({
+      indent: '  '
+    }))
+    .pipe(gulp.dest('build/css'))
+});
+// for finish task
+
+
 gulp.task('scripts', () => {
   return gulp.src('src/static/js/script.js')
+     .pipe(sourcemaps.init())
      //.pipe(uglify())
      .pipe(include())
+     .pipe(sourcemaps.write('./'))
      .pipe(gulp.dest('./build/js'))
      .pipe(browserSync.stream());
 });
@@ -88,4 +104,10 @@ gulp.task('default', gulp.series(
   gulp.parallel('html', 'style'),
   'img', 'scripts', 'fonts', 'libs',
   gulp.parallel('watch', 'serve')
+));
+
+gulp.task('finish', gulp.series(
+  'clean',
+  gulp.parallel('html', 'styleFinish'),
+  'img', 'scripts', 'fonts', 'libs'
 ));
