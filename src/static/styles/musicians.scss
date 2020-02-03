@@ -140,31 +140,7 @@
   color: #969696;
 }
 
-// custom scrollbar
-.search-hint{
-  max-height: 250px;
-  overflow: hidden;
-}
 
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-  width: 6px;
-  border-radius: 0;
-  background-color: #f2547c;
-}
-
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
-.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
-.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
-.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
-.mCSB_scrollTools .mCSB_dragger:focus .mCSB_dragger_bar{
-  background-color: #f2547c;
-}
-
-.mCSB_scrollTools .mCSB_draggerRail {
-  width: 6px;
-  background-color: #f1f1f1;
-}
-// end custom scrollbar
 
 .search-hint-musician li{
   font-family: Roboto, sans-serif;
@@ -218,11 +194,15 @@
   color: #f25d82;
 }
 
-.picked{
+.search-hint .picked{
   font-family: Roboto,sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #f2547c;
+  background-color: #f1f1f1;
+}
+
+.search-hint .picked:hover{
   background-color: #f1f1f1;
 }
 

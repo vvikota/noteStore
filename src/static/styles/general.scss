@@ -102,6 +102,34 @@ body .wrapper .ready-slider{
   opacity: 1;
 }
 
+.m-scroll-bar{
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+  width: 6px;
+  border-radius: 0;
+  background-color: #f2547c;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:focus .mCSB_dragger_bar{
+  background-color: #f2547c;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+  width: 6px;
+  background-color: #f1f1f1;
+}
+
+.mCSB_inside > .mCSB_container {
+  margin-right: 14px;
+}
+
 @media screen and (max-width: 768px) {
   .wrapper{
     max-width: 786px;

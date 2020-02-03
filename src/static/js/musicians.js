@@ -4,10 +4,8 @@ if($('.search-input-musician') || $('.choose-year')){
   var yearList = $('.choose-year__list');
   var changeYearB = $('.choose-year__button');
 
-  $('.search-hint').mCustomScrollbar();
+  $('.m-scroll-bar').mCustomScrollbar();
  
-
-
   $(document).click(function(even) {
     var searchRezult = $(event.target).html();
     var searchRezultItem = ('<div class="search-rezult-item">' + '<span></span>' + searchRezult + '</div>');
@@ -33,9 +31,10 @@ if($('.search-input-musician') || $('.choose-year')){
     if($('.search-input-musician').is(event.target) 
           && !searchHintMuz.hasClass('show')){
       searchHintMuz.addClass('show');
-    } else if($(event.target).is('.search-hint-musician > li') ){
-       
+
+    } else if($(event.target).is('#mCSB_2_container > li') ){       
         $('.search-rezult-container').append(searchRezultItem);
+
     } else if(searchHintMuz.hasClass('show')){
       searchHintMuz.removeClass('show');
 
@@ -48,7 +47,7 @@ if($('.search-input-musician') || $('.choose-year')){
     } else if(chooseYear.is(event.target) 
         &&  !yearList.hasClass('show')){
         yearList.addClass('show');
-    }  else if ($(event.target).is('.choose-year__list > li')){
+    }  else if ($(event.target).is('#mCSB_3_container > li')){
       $(event.target).addClass('picked')
       $('.search-rezult-container').append(searchRezultItem);
       refreshButton();
@@ -92,23 +91,32 @@ if ($('.slider-range')) {
 
   rangeControl.on('input', function (e) { // нужна проверка на число 
      
-    if($(this).hasClass('range-control--max')){
-       var max =  $(this).val();
-       var min = $('.range-control--min').val();
+    var inputVal = parseFloat($(e.target).val());
+    console.log(inputVal);
 
-      console.log(`max ${max}`);
-      console.log(`min ${min}`);
-      if(max < min){
-        console.log('minus')
-      }
-    } 
+    if(typeof inputVal === 'number' && inputVal === inputVal){
     
-    else if($(this).hasClass('range-control--min')){
-    
-      console.log($(this).val())
+
+      if($(this).hasClass('range-control--max')){
+        var max =  $(this).val();
+        var min = $('.range-control--min').val();
+ 
+      // console.log(`max ${max}`);
+       //console.log(`min ${min}`);
+       if(max < min){
+         console.log('minus')
+       }
+     } 
+     
+     // else if($(this).hasClass('range-control--min')){
+     
+     //   console.log($(this).val())
+     // }
+ 
+     var index = ($(this).hasClass('range-control--max') == true) ? 1 : 0;
+     $('.slider-range').slider("values", index, $(this).val());
+    } else {
+      console.log('enter correct request')
     }
-
-    var index = ($(this).hasClass('range-control--max') == true) ? 1 : 0;
-    $('.slider-range').slider("values", index, $(this).val());
   })
 }
