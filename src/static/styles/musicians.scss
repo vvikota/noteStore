@@ -1,3 +1,7 @@
+.wrapper .choose-background{
+  background-color: #f1f1f1;
+}
+
 
 .musician-card-wrapper{
   margin: -87px 0 0 -160px;
@@ -136,6 +140,32 @@
   color: #969696;
 }
 
+// custom scrollbar
+.search-hint{
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+  width: 6px;
+  border-radius: 0;
+  background-color: #f2547c;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:focus .mCSB_dragger_bar{
+  background-color: #f2547c;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+  width: 6px;
+  background-color: #f1f1f1;
+}
+// end custom scrollbar
+
 .search-hint-musician li{
   font-family: Roboto, sans-serif;
   font-size: 14px;
@@ -175,6 +205,25 @@
   top: 17px;
   right: 14px;
   background: url('../img/select-arrow.png') no-repeat;
+}
+
+.choose-year__list li{
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.choose-year__list li:hover{
+  background: transparent;
+  color: #f25d82;
+}
+
+.picked{
+  font-family: Roboto,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #f2547c;
+  background-color: #f1f1f1;
 }
 
 .range-price{
@@ -292,7 +341,7 @@
   font-weight: 400;
   color: #191919;
   white-space: nowrap;
-  margin-right: 25px;
+  margin-right: 55px;
 }
 
 .search-rezult-container{
@@ -310,12 +359,14 @@
   font-size: 14px;
   font-weight: 400;
   white-space: nowrap;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .search-rezult-item span{
   position: absolute;
   content: "";
-  top: 4px;
+  top: 13px;
   left: 0;
   width: 9px;
   height: 9px;
@@ -343,6 +394,17 @@
   top: 11px;
   right: 14px;
   background: url('../img/double-arrow.png') no-repeat;
+}
+
+.sort-rezult-list li{
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sort-rezult-list li:hover{
+  background-color: transparent;
+  color: #f25d82;
 }
 
 .musicians-block{

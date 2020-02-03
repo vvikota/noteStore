@@ -1,3 +1,77 @@
+if($('.search-input-musician') || $('.choose-year')){
+  var searchHintMuz = $('.search-hint-musician');
+  var chooseYear = $('.choose-year__button');
+  var yearList = $('.choose-year__list');
+  var changeYearB = $('.choose-year__button');
+
+  $('.search-hint').mCustomScrollbar();
+ 
+
+
+  $(document).click(function(even) {
+    var searchRezult = $(event.target).html();
+    var searchRezultItem = ('<div class="search-rezult-item">' + '<span></span>' + searchRezult + '</div>');
+
+    function deleteSelected(searchText) {
+      var pickedLi = yearList.find( $('li.picked:contains('+searchText+')'));
+      pickedLi.removeClass('picked');
+    }
+      
+    function refreshButton(){
+      var amount = yearList.find('li.picked').length;
+      if (amount === 0 ){
+        changeYearB.html('Год');
+        changeYearB.removeClass('choose-background');
+      } else if(amount > 0 && changeYearB.hasClass('choose-background')){
+        changeYearB.html('Выбрано(' + amount + ')')
+      } else if  (amount > 0 && !changeYearB.hasClass('choose-background')){
+        changeYearB.html('Выбрано(' + amount + ')');
+        changeYearB.addClass('choose-background');
+      }
+    }
+
+    if($('.search-input-musician').is(event.target) 
+          && !searchHintMuz.hasClass('show')){
+      searchHintMuz.addClass('show');
+    } else if($(event.target).is('.search-hint-musician > li') ){
+       
+        $('.search-rezult-container').append(searchRezultItem);
+    } else if(searchHintMuz.hasClass('show')){
+      searchHintMuz.removeClass('show');
+
+    } else if ($(event.target).is('.search-rezult-item > span')){
+      $(event.target).parent().remove();
+      var yearValue = $(event.target).parent().html().substr(-4 , 4);
+      deleteSelected(yearValue);
+      refreshButton()
+
+    } else if(chooseYear.is(event.target) 
+        &&  !yearList.hasClass('show')){
+        yearList.addClass('show');
+    }  else if ($(event.target).is('.choose-year__list > li')){
+      $(event.target).addClass('picked')
+      $('.search-rezult-container').append(searchRezultItem);
+      refreshButton();
+    } else if(yearList.hasClass('show')){
+      yearList.removeClass('show');
+    }
+    
+    else if($('.sort-rezult-button').is(event.target) 
+         && !($('.sort-rezult-list')).hasClass('show')){
+      $('.sort-rezult-list').addClass('show');
+    }  
+    
+    else if($(event.target).is('.sort-rezult-list > li')){
+      $('.sort-rezult-button').html($(event.target).html());
+      $('.sort-rezult-list').removeClass('show');
+    }
+    
+    else if ($('.sort-rezult-list').hasClass('show')){
+      $('.sort-rezult-list').removeClass('show');
+    }
+  })
+}
+
 if ($('.slider-range')) {
   $('.slider-range').slider({
     range: true,
@@ -34,35 +108,7 @@ if ($('.slider-range')) {
       console.log($(this).val())
     }
 
-    // var index = ($(this).hasClass('range-control--max') == true) ? 1 : 0;
-    // $('.slider-range').slider("values", index, $(this).val());
-  })
-}
-
-var searchHint = $('.search-hint-musician');
-
-$(document).click(function(even) {
-  if($('.search-input-musician').is(event.target) 
-         && !searchHint.hasClass('show')){
-    searchHint.addClass('show');
-  } else if($(event.target).is('.search-hint-musician > li') ){
-       var searchRezult = $(event.target).html();
-       var searchRezultItem = ('<div class="search-rezult-item">' + '<span></span>' + searchRezult + '</div>');
-       $('.search-rezult-container').append(searchRezultItem);
-  } else if(searchHint.hasClass('show')){
-    searchHint.removeClass('show');
-  } else if ($(event.target).is('.search-rezult-item > span')){
-    $(event.target).parent().remove();
-  }
-})
-
-if($('.choose-year')){
-  $(document).click(function (event) {
-    if($('.choose-year__button').is(event.target)){
-       $('.choose-year__list').toggleClass('show');
-    
-    } else if($('.sort-rezult-button').is(event.target)){
-      $('.sort-rezult-list').toggleClass('show');
-    }
+    var index = ($(this).hasClass('range-control--max') == true) ? 1 : 0;
+    $('.slider-range').slider("values", index, $(this).val());
   })
 }
