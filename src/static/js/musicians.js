@@ -39,25 +39,30 @@ if ($('.slider-range')) {
   })
 }
 
-if($('.musicians-search-label')){
-  $('.search-input-musician').focus(function () {
-    console.log('focus')
-    $('.search-hint-musician').addClass('show');
-  })
-  
-  $('.search-input-musician').focusout(function () {
-    $('.search-hint-musician').removeClass('show');
-  })
-}
+var searchHint = $('.search-hint-musician');
+
+$(document).click(function(even) {
+  if($('.search-input-musician').is(event.target) 
+         && !searchHint.hasClass('show')){
+    searchHint.addClass('show');
+  } else if($(event.target).is('.search-hint-musician > li') ){
+       var searchRezult = $(event.target).html();
+       var searchRezultItem = ('<div class="search-rezult-item">' + '<span></span>' + searchRezult + '</div>');
+       $('.search-rezult-container').append(searchRezultItem);
+  } else if(searchHint.hasClass('show')){
+    searchHint.removeClass('show');
+  } else if ($(event.target).is('.search-rezult-item > span')){
+    $(event.target).parent().remove();
+  }
+})
 
 if($('.choose-year')){
   $(document).click(function (event) {
     if($('.choose-year__button').is(event.target)){
        $('.choose-year__list').toggleClass('show');
     
-    } else if($('.sort').is(event.target)){
-      $('.sort-list').toggleClass('show');
+    } else if($('.sort-rezult-button').is(event.target)){
+      $('.sort-rezult-list').toggleClass('show');
     }
-
   })
 }

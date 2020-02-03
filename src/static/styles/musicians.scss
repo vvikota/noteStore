@@ -136,6 +136,18 @@
   color: #969696;
 }
 
+.search-hint-musician li{
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #222222;
+  font-weight: 400;
+}
+
+.search-hint-musician li:hover{
+  background-color: transparent;
+  color: #f25d82;
+}
+
 .musicians-search-label button{
   width: 47px;
   background-color: #f7f7f7;
@@ -279,6 +291,36 @@
   line-height: 24px;
   font-weight: 400;
   color: #191919;
+  white-space: nowrap;
+  margin-right: 25px;
+}
+
+.search-rezult-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.search-rezult-item{
+  position: relative;
+  margin-right: 30px;
+  padding-left: 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.search-rezult-item span{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  background: #ffffff url(../img/search-rezult-cross.png) no-repeat;
+  cursor: pointer;
 }
 
 .rezult-sorting-wrapper{
