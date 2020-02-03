@@ -28,7 +28,7 @@
   color: #f2547c;
 }
 
-.navigation-block h2,
+.top-description h2,
 .musicians-description h2{
   font-family: Roboto, sans-serif;
   font-size: 26px;
@@ -37,42 +37,42 @@
   color: #000000;
 }
 
-.navigation-block{
+.top-description{
   padding-top: 28px;
   padding-bottom: 23px;
   border-top: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
 }
 
-.navigation-block-breadcrumbs{
+.top-breadcrumbs{
   font-family: HelveticaNeueCyrRoman, sans-serif;
   font-weight: 400;
   font-size: 13px;
 }
 
-.navigation-block h2{
+.top-description h2{
   margin-top: 28px;
 }
 
-.navigation-block-breadcrumbs a{
+.top-breadcrumbs a{
   position: relative;
   padding-right: 16px;
   color: #5897c4;
   text-decoration: none;
 }
 
-.navigation-block-breadcrumbs a:after{
+.top-breadcrumbs a:after{
   position: absolute;
   content: "→";
   right: 0px;
   color: #252525;
 }
 
-.navigation-block-breadcrumbs span{
+.top-breadcrumbs span{
   color: #252525;
 }
 
-.navigation-block-descriptions{
+.top-description-text{
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -81,7 +81,7 @@
   color: #333333;
 }
 
-.navigation-block-link{
+.top-description-text-more{
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -90,12 +90,12 @@
   color: #5897c4;
 }
 
-.sort-block{
+.musician-sort{
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.sort-block .wrapper{
+.musician-sort .wrapper{
   align-items: center;
   flex-wrap: wrap;
 }
@@ -110,7 +110,7 @@
 .choose-year__button,
 .range-price,
 .only-free-checkbox,
-.sort{
+.sort-rezult-button{
   display: flex;
   align-items: center;
   height: 42px;
@@ -215,7 +215,7 @@
 .only-free-checkbox,
 .range-control,
 .range-price-description,
-.sort{
+.sort-rezult-button{
   font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -262,14 +262,14 @@
   display: none;
 }
 
-.sort-block-nav{
+.sort-rezult{
   padding-top: 25px;
   padding-bottom: 25px;
   border-top: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
 }
 
-.sort-block-nav .wrapper{
+.sort-rezult .wrapper{
   align-items: center;
 }
 
@@ -281,11 +281,11 @@
   color: #191919;
 }
 
-.sort-wrapper{
+.rezult-sorting-wrapper{
   position: relative;
 }
 
-.sort{
+.sort-rezult-button{
   position: relative;
   width: 192px;
   padding-left: 14px;
@@ -293,7 +293,7 @@
   background-color: #ffffff;
 }
 
-.sort:after{
+.sort-rezult-button:after{
   position: absolute;
   content: "";
   width: 11px;
@@ -372,7 +372,7 @@
 }
 
 @media screen and (max-width: 850px) {
-  .sort-block .wrapper{
+  .musician-sort .wrapper{
     flex-direction: column;
   }
 
@@ -401,11 +401,11 @@
     margin-bottom: 0;
   }
 
-  .navigation-block {
+  .top-description {
     padding-top: 23px;
   }
 
-  .sort-block-nav {
+  .sort-rezult {
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -424,7 +424,7 @@
       margin-bottom: 10px;
   }
 
-  .sort-block .wrapper{
+  .musician-sort .wrapper{
     justify-content: flex-start;
   }
 
@@ -445,7 +445,7 @@
 }
 
 @media screen and (max-width: 510px) {
-  .navigation-block-descriptions{
+  .top-description-text{
     height: 95px;
     overflow: hidden;
   }
@@ -474,7 +474,7 @@
     right: 1px;
   }
 
-  .sort-block-nav .wrapper{
+  .sort-rezult .wrapper{
     flex-direction: column;
   }
 
@@ -482,8 +482,8 @@
     margin-bottom: 15px;
   }
 
-  .sort-wrapper,
-  .sort{
+  .rezult-sorting-wrapper,
+  .sort-rezult-button{
     width: 100%;
   }
 
