@@ -1,4 +1,9 @@
+.choose-arrangement{
+  position: relative;
+}
+
 .choose-arrangement__button{
+  position: relative;
   align-items: center;
   position: relative;
   width: 356px;
@@ -20,4 +25,15 @@
   top: 17px;
   right: 14px;
   background: url(../img/select-arrow.png) no-repeat;
+}
+
+.choose-arrangement__list li{
+  font-family: Roboto,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.choose-arrangement__list li:hover{
+  background-color: #ffffff;
+  color: #f25d82;
 }

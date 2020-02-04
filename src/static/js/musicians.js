@@ -49,7 +49,7 @@ if($('.search-input-musician') || $('.choose-year') || $('.range-price')){
         &&  !yearList.hasClass('show')){
         yearList.addClass('show');
     }  else if ($(event.target).is('#mCSB_3_container > li')){
-      $(event.target).addClass('picked')
+      $(event.target).addClass('picked');
       $('.search-rezult-container').append(searchRezultItem);
       refreshButton();
     } else if(yearList.hasClass('show')){
