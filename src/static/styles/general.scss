@@ -93,6 +93,12 @@ body .show{
   justify-content: space-between;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body .wrapper .ready-slider{
   overflow: inherit;
 }

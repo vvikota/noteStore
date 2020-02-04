@@ -1,0 +1,23 @@
+.choose-arrangement__button{
+  align-items: center;
+  position: relative;
+  width: 356px;
+  height: 42px;
+  padding-left: 14px;
+  text-align: left;
+  border: 1px solid #cacaca;
+  box-sizing: border-box;
+  outline: none;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.choose-arrangement__button:after {
+  position: absolute;
+  content: "";
+  width: 11px;
+  height: 5px;
+  top: 17px;
+  right: 14px;
+  background: url(../img/select-arrow.png) no-repeat;
+}

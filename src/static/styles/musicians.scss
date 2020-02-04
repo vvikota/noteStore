@@ -2,18 +2,20 @@
   background-color: #f1f1f1;
 }
 
-
-.musician-card-wrapper{
-  margin: -87px 0 0 -160px;
-  padding-bottom: 38px;
-}
-
 .musician-card{
   display: flex;
   float: left;
   flex-direction: column;
-  margin-left: 160px;
-  margin-top: 87px;
+  margin-bottom: 87px;
+  margin-right: calc((100% - 740px)/3);
+}
+
+.musician-card:nth-last-child(-n+4){
+  margin-bottom: 0;
+}
+
+.musician-card:nth-child(4n){
+  margin-right: 0;
 }
 
 .musician-card-img-wrapper{
@@ -389,6 +391,7 @@
 }
 
 .musicians-block{
+  margin-bottom: 38px;
   padding-top: 40px;
 }
 
@@ -452,8 +455,50 @@
   font-family: Roboto,sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 26px;
   color: #333333;
+}
+
+@media screen and (max-width: 1285px) {
+  .musicians-search-label, .choose-year, .range-price, .only-free-checkbox {
+      margin-bottom: 10px;
+  }
+
+  .musician-sort .wrapper{
+    justify-content: flex-start;
+  }
+
+  .musicians-search-label,
+  .choose-year,
+  .range-price,
+  .only-free-checkbox{
+  margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .musician-card,
+  .musician-card:nth-child(4n){
+    margin-right: calc((100% - 555px)/2);
+  }
+
+  .musician-card:nth-child(3n){
+    margin-right: 0;
+  }
+
+  .musicians-block {
+    padding-top: 30px;
+  }
+
+  .musician-card,
+  .musician-card:nth-last-child(-n+4){
+    margin-bottom: 59px;
+  }
+
+  .musician-card:nth-last-child(1){
+    margin-bottom: 0;
+  }
+
 }
 
 @media screen and (max-width: 850px) {
@@ -497,28 +542,66 @@
 
   .musicians-description {
     margin-top: 38px;
-  }
-
-  .musicians-description{
     margin-bottom: 75px;
   }
-}
 
-@media screen and (max-width: 1285px) {
-  .musicians-search-label, .choose-year, .range-price, .only-free-checkbox {
-      margin-bottom: 10px;
+  .musicians-description h2 {
+    margin-bottom: 27px;
   }
 
-  .musician-sort .wrapper{
-    justify-content: flex-start;
+  .musicians-description p {
+    line-height: 24px;
+    margin-bottom: 26px;
   }
 
-  .musicians-search-label,
-  .choose-year,
-  .range-price,
-  .only-free-checkbox{
-  margin-right: 15px;
+  .musicians-description p:last-child {
+    margin-bottom: 0;
+  }
 }
+
+@media screen and (max-width: 685px) {
+  .musician-card,
+  .musician-card:nth-child(3n){
+    margin-right: calc(100% - 370px);
+  }
+
+  .musician-card:nth-child(2n){
+    margin-right: 0;
+  }
+
+  .musician-card,
+  .musician-card:nth-last-child(1){
+    margin-bottom: 59px;
+  }
+
+  .musician-card:nth-last-child(-n + 2){
+    margin-bottom: 0;
+  }
+
+  .sort-rezult .wrapper {
+    flex-direction: column;
+  }
+  
+  .rezults-number{
+    padding-bottom: 10px
+  }
+
+  .search-rezult-container{
+
+  }
+
+  .rezult-sorting-wrapper{
+    padding-top: 5px;
+  }
+
+  .musician-sort {
+    padding-bottom: 20px;
+  }
+
+  .rezults-number {
+    margin-right: 0;
+  }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -577,28 +660,47 @@
     height: 95px;
   }
 
-  @media screen and (max-width: 430px) {
-    .musicians-block {
-      padding-top: 20px;
-    }
+  .musician-card,
+  .musician-card:nth-child(2n){
+    margin-right: calc((100% - 308px)/2);
+  }
 
-    .musician-card{
-      flex-direction: row;
-      margin-top: 27px;
-    }
-
-    .musician-card-img-wrapper{
-      margin-bottom: 0;
-    }
-
-    .musician-card-wrapper{
-      margin: -27px 0 0 -160px;
-    }
-
-    .musician-card-author{
-      margin-left: 10px;
-      
-    }
-  } 
+  .musician-card:nth-child(3n){
+    margin-right: 0;
+  }
 }
+
+@media screen and (max-width: 430px) {
+  .musicians-block {
+    padding-top: 20px;
+  }
+
+  .musician-card,
+  .musician-card:nth-last-child(-n+4){
+    flex-direction: row;
+    margin-bottom: 27px;
+  }
+
+  .musician-card:last-child{
+    margin-bottom: 0;
+  }
+
+  .musicians-block {
+    margin-bottom: 16px;
+  }
+
+  .musician-card-img-wrapper{
+    margin-bottom: 0;
+  }
+
+  .musician-card-wrapper{
+    margin: -27px 0 0 -160px;
+  }
+
+  .musician-card-author{
+    margin-left: 24px;
+    
+  }
+} 
+
 

@@ -64,10 +64,10 @@ gulp.task('styleFinish', () => {
 
 gulp.task('scripts', () => {
   return gulp.src('src/static/js/script.js')
-     .pipe(sourcemaps.init())
+     //.pipe(sourcemaps.init())
      //.pipe(uglify())
      .pipe(include())
-     .pipe(sourcemaps.write('./'))
+     //.pipe(sourcemaps.write('./'))
      .pipe(gulp.dest('./build/js'))
      .pipe(browserSync.stream());
 });
