@@ -25,6 +25,7 @@ if (notesSlider) {
 
   var noteList = $('.note-card');
 
+  
   function noteSliderSpotter(){
     
     function marginSpotter() {

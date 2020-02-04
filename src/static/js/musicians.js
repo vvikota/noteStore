@@ -1,5 +1,6 @@
-if($('.search-input-musician') || $('.choose-year')){
-  var searchHintMuz = $('.search-hint-musician');
+
+if($('.search-input-musician') || $('.choose-year') || $('.range-price')){
+  var searchHintMuz = $('.search-hint-musician'); 
   var chooseYear = $('.choose-year__button');
   var yearList = $('.choose-year__list');
   var changeYearB = $('.choose-year__button');
@@ -68,6 +69,14 @@ if($('.search-input-musician') || $('.choose-year')){
     else if ($('.sort-rezult-list').hasClass('show')){
       $('.sort-rezult-list').removeClass('show');
     }
+
+    else if($('.close-alert').is(event.target) ){
+      $('.alert-popup').removeClass('show')
+    }
+
+    else if ($('.alert-popup').hasClass('show') && !($('.alert-popup')).is(event.target)){
+      $('.alert-popup').removeClass('show')
+    }
   })
 }
 
@@ -78,8 +87,9 @@ if ($('.slider-range')) {
     max: 10000,
     values: [60, 8999],
     slide: function (event, ui) {
-      $('.range-control--min').val(ui.values[0]);
-      $('.range-control--max').val(ui.values[1]);
+       $('.range-control--min').val(ui.values[0]);
+       $('.range-control--max').val(ui.values[1]);
+     
     },
     create: function () {
       $('.range-control--min').val($('.slider-range').slider("values", 0));
@@ -89,34 +99,64 @@ if ($('.slider-range')) {
 
   var rangeControl = $('.range-control');
 
-  rangeControl.on('input', function (e) { // нужна проверка на число 
-     
-    var inputVal = parseFloat($(e.target).val());
-    console.log(inputVal);
+  rangeControl.on('input', function (e) {
+    var inputVal = $(e.target).val();
 
-    if(typeof inputVal === 'number' && inputVal === inputVal){
-    
+    if(inputVal.match(/^\d+$/) || inputVal.length == 0){
+      
+      var max = +$('.range-control--max').val();
+      var min = +$('.range-control--min').val();
 
-      if($(this).hasClass('range-control--max')){
-        var max =  $(this).val();
-        var min = $('.range-control--min').val();
- 
-      // console.log(`max ${max}`);
-       //console.log(`min ${min}`);
-       if(max < min){
-         console.log('minus')
-       }
-     } 
-     
-     // else if($(this).hasClass('range-control--min')){
-     
-     //   console.log($(this).val())
-     // }
- 
+      if($(this).hasClass('range-control--max') && max < min){
+        $('.range-control--max').val(min + 1000);
+      } 
+      else if ($(this).hasClass('range-control--min') && min > max){
+        $('.range-control--min').val(max - 1000)
+      }
+
      var index = ($(this).hasClass('range-control--max') == true) ? 1 : 0;
      $('.slider-range').slider("values", index, $(this).val());
+
     } else {
-      console.log('enter correct request')
+      $('.alert-popup').addClass('show')
     }
   })
 }
+
+// if($('.musician-block')){
+  
+//   var musicianList = $('.musician-card');
+//   var wrapper = $('.musician-card-wrapper');
+   
+//   function mMarginSpotter(){
+    
+//     function marginSpotter() {
+//       for( var i = 0; i < musicianList.length; i++){
+//         musicianList[i].style.marginLeft = marginL + 'px';
+//         wrapper.style.marginLeft = '-' + marginL + 'px';
+//       }
+//     }
+
+//      if (window.innerWidth <= 1320 && window.innerWidth >= 1000){ 
+//        var marginL = Math.round((window.innerWidth - 185*3 - 24*2) / 2); 
+//        marginSpotter()
+//      }
+//     // } else if (window.innerWidth <= 1000 && window.innerWidth >= 765){
+//     //   var marginR = Math.round((window.innerWidth - 75*2 - 195*3 - 20) / 2); 
+//     //   marginSpotter()
+
+//     // } 
+//     // else if (window.innerWidth <= 765 && window.innerWidth >= 630){
+//     //   var marginR = Math.round((window.innerWidth - 75*2 - 195*2 - 20)); 
+//     //   marginSpotter()
+//     // }
+//   }
+
+//   $(window).resize(function(){
+//     mMarginSpotter();
+//   })
+  
+//   $(document).ready(function (){
+//     mMarginSpotter();
+//   })
+// }
