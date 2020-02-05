@@ -466,8 +466,11 @@
 }
 
 @media screen and (max-width: 1285px) {
-  .musicians-search-label, .choose-year, .range-price, .only-free-checkbox {
-      margin-bottom: 10px;
+  .musicians-search-label,
+  .choose-year,
+  .range-price,
+  .only-free-checkbox {
+    margin-bottom: 10px;
   }
 
   .musician-sort .wrapper{
@@ -504,7 +507,6 @@
   .musician-card:nth-last-child(1){
     margin-bottom: 0;
   }
-
 }
 
 @media screen and (max-width: 850px) {
@@ -603,7 +605,6 @@
   .rezults-number {
     margin-right: 0;
   }
-
 }
 
 @media screen and (max-width: 575px) {

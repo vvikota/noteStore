@@ -18,8 +18,10 @@ if($('.search-input-musician') || $('.choose-year') || $('.range-price')){
       
     function refreshButton(){
       var amount = yearList.find('li.picked').length;
+      var defaultValue = changeYearB.val();
+
       if (amount === 0 ){
-        changeYearB.html('Год');
+        changeYearB.html(defaultValue);
         changeYearB.removeClass('choose-background');
       } else if(amount > 0 && changeYearB.hasClass('choose-background')){
         changeYearB.html('Выбрано(' + amount + ')')
@@ -41,7 +43,7 @@ if($('.search-input-musician') || $('.choose-year') || $('.range-price')){
 
     } else if ($(event.target).is('.search-rezult-item > span')){
       $(event.target).parent().remove();
-      var yearValue = $(event.target).parent().html().substr(-4 , 4);
+      var yearValue = $(event.target).parent().html().substr(13);
       deleteSelected(yearValue);
       refreshButton()
 

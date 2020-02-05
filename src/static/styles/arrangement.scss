@@ -1,5 +1,6 @@
 .choose-arrangement{
   position: relative;
+  margin-right: 5px;
 }
 
 .choose-arrangement__button{
@@ -37,3 +38,72 @@
   background-color: #ffffff;
   color: #f25d82;
 }
+
+.arrangement{
+  margin-bottom: 0;
+}
+
+.arrangement-card{
+  margin-bottom: 42px;
+  min-height: 305px;
+}
+.arrangement-card .description-block{
+  width: 185px;
+}
+
+.arrangement-card .product-instrument{
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.arrangement-card .product-price{
+  margin-top: 11px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #191919;
+}
+
+.arrangement-card .product-price.free{
+  color: #94c304; 
+}
+
+@media screen and (max-width: 1285px){
+  .choose-arrangement{
+     margin-bottom: 10px;
+     margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 850px){
+  .choose-arrangement,
+  .choose-arrangement__button{
+    width: 100%;
+  } 
+
+  .arrangement-card,
+  .arrangement-card:nth-last-child(-n+4) {
+    margin-bottom: 26px;
+  }
+
+  .arrangement-card:last-child {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 510px){
+  .arrangement .wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arrangement-card{
+    flex-direction: row;
+    min-height: auto;
+  }
+
+  .arrangement-card .description-block{
+    margin-left: 23px;
+  }
+}
+
