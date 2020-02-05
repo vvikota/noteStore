@@ -74,7 +74,7 @@ if($('.search-input-musician') || $('.choose-year') || $('.range-price')){
       $('.alert-popup').removeClass('show')
     }
 
-    else if ($('.alert-popup').hasClass('show') && !($('.alert-popup')).is(event.target)){
+    else if ($('.alert-popup').hasClass('show') && !($('.alert-message')).is(event.target)){
       $('.alert-popup').removeClass('show')
     }
   })
@@ -118,7 +118,7 @@ if ($('.slider-range')) {
      $('.slider-range').slider("values", index, $(this).val());
 
     } else {
-      $('.alert-popup').addClass('show')
+      $('.alert-popup').addClass('show');
     }
   })
 }

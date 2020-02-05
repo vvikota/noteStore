@@ -10,21 +10,21 @@
     <li><a href="#">Пусто</a></li>
   </ol>
   <button class="service-close-button" onclick="$(this).parent().hide()">Close X</button>
+  <style>
+    .service-menu {
+      position: fixed;
+      z-index: 5;
+      bottom: 1px;
+      right: 1px;
+      border: 1px solid #000000;
+      padding: 15px 10px 5px 10px;
+      background-color: #ffffff;
+    }
+  
+    .service-close-button {
+      position: fixed;
+      bottom: 169px;
+      right: 1px;
+    }
+  </style>
 </div>
-<style>
-  .service-menu {
-    position: fixed;
-    z-index: 5;
-    bottom: 1px;
-    right: 1px;
-    border: 1px solid #000000;
-    padding: 15px 10px 5px 10px;
-    background-color: #ffffff;
-  }
-
-  .service-close-button {
-    position: fixed;
-    bottom: 169px;
-    right: 1px;
-  }
-</style>
