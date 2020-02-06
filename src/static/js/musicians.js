@@ -44,7 +44,6 @@ if($('.sort-js')){
     }
 
     else if ($('.choose-list-js').hasClass('show')){
-      console.log('click');
       $('.choose-list-js').removeClass('show');
     }
 
