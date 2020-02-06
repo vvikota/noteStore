@@ -1,63 +1,63 @@
-
-if($('.search-input-musician') || $('.choose-year') || $('.range-price')){
+if($('.search-input-musician') || $('.choose-year') || $('.range-price') || $('.sort-js')){
   var searchHintMuz = $('.search-hint-musician'); 
-  var chooseYear = $('.choose-year__button');
-  var yearList = $('.choose-year__list');
-  var changeYearB = $('.choose-year__button');
-
+  var chooseButton = $('.choose-button-js');
+  
   $('.m-scroll-bar').mCustomScrollbar();
  
-  $(document).click(function(even) {
-    var searchRezult = $(event.target).html();
+  $(document).click(function(event) {
+    var chooseList = $('.choose-list-js .mCSB_container');
+    var target = event.target; 
+    var searchRezult = $(target).html();
     var searchRezultItem = ('<div class="search-rezult-item">' + '<span></span>' + searchRezult + '</div>');
+    var parentLi = $(target).parent().parent().parent();
 
-    function deleteSelected(searchText) {
-      var pickedLi = yearList.find( $('li.picked:contains('+searchText+')'));
-      pickedLi.removeClass('picked');
-    }
-      
     function refreshButton(){
-      var amount = yearList.find('li.picked').length;
-      var defaultValue = changeYearB.val();
+      var amount = chooseList.find('li.picked').length;
+      var defaultValue = chooseButton.val();
 
       if (amount === 0 ){
-        changeYearB.html(defaultValue);
-        changeYearB.removeClass('choose-background');
-      } else if(amount > 0 && changeYearB.hasClass('choose-background')){
-        changeYearB.html('Выбрано(' + amount + ')')
-      } else if  (amount > 0 && !changeYearB.hasClass('choose-background')){
-        changeYearB.html('Выбрано(' + amount + ')');
-        changeYearB.addClass('choose-background');
+        chooseButton.html(defaultValue);
+        chooseButton.removeClass('choose-background');
+      } else if(amount > 0 && chooseButton.hasClass('choose-background')){
+        chooseButton.html('Выбрано(' + amount + ')')
+      } else if  (amount > 0 && !chooseButton.hasClass('choose-background')){
+        chooseButton.html('Выбрано(' + amount + ')');
+        chooseButton.addClass('choose-background');
       }
     }
 
-    if($('.search-input-musician').is(event.target) 
-          && !searchHintMuz.hasClass('show')){
-      searchHintMuz.addClass('show');
-
-    } else if($(event.target).is('#mCSB_2_container > li') ){       
-        $('.search-rezult-container').append(searchRezultItem);
-
-    } else if(searchHintMuz.hasClass('show')){
-      searchHintMuz.removeClass('show');
-
-    } else if ($(event.target).is('.search-rezult-item > span')){
-      $(event.target).parent().remove();
-      var yearValue = $(event.target).parent().html().substr(13);
-      deleteSelected(yearValue);
-      refreshButton()
-
-    } else if(chooseYear.is(event.target) 
-        &&  !yearList.hasClass('show')){
-        yearList.addClass('show');
-    }  else if ($(event.target).is('#mCSB_3_container > li')){
-      $(event.target).addClass('picked');
-      $('.search-rezult-container').append(searchRezultItem);
-      refreshButton();
-    } else if(yearList.hasClass('show')){
-      yearList.removeClass('show');
-    }
+    if($('.search-input-musician').is(target) 
+       && !searchHintMuz.hasClass('show')){
+          searchHintMuz.addClass('show');
+    } 
     
+    else if($(target).is('.mCSB_container > li') && parentLi.hasClass('search-hint-musician')){      
+        $('.search-rezult-container').append(searchRezultItem);
+        
+    } else if  ($(target).is('.mCSB_container > li') && !parentLi.hasClass('search-hint-musician')){
+        $('.search-rezult-container').append(searchRezultItem);
+        $(target).addClass('picked');
+        refreshButton();
+    }
+    else if(searchHintMuz.hasClass('show')){
+      searchHintMuz.removeClass('show');
+    }
+     else if ($(target).is('.search-rezult-item > span')){
+      $(target).parent().remove();
+
+      var searchText = $(target).parent().html().substr(13);
+      chooseList.find( $('li.picked:contains('+searchText+')')).removeClass('picked');
+      refreshButton();
+    } 
+    else if(chooseButton.is(event.target)){
+       $(target).next().toggleClass('show')
+    }  
+
+    else if ($('.choose-list-js').hasClass('show')){
+      $('.choose-list-js').removeClass('show');
+    }
+
+    // popular and new change
     else if($('.sort-rezult-button').is(event.target) 
          && !($('.sort-rezult-list')).hasClass('show')){
       $('.sort-rezult-list').addClass('show');
@@ -72,6 +72,7 @@ if($('.search-input-musician') || $('.choose-year') || $('.range-price')){
       $('.sort-rezult-list').removeClass('show');
     }
 
+    // range price
     else if($('.close-alert').is(event.target) ){
       $('.alert-popup').removeClass('show')
     }
@@ -82,45 +83,4 @@ if($('.search-input-musician') || $('.choose-year') || $('.range-price')){
   })
 }
 
-if ($('.slider-range')) {
-  $('.slider-range').slider({
-    range: true,
-    min: 0,
-    max: 10000,
-    values: [60, 8999],
-    slide: function (event, ui) {
-       $('.range-control--min').val(ui.values[0]);
-       $('.range-control--max').val(ui.values[1]);
-     
-    },
-    create: function () {
-      $('.range-control--min').val($('.slider-range').slider("values", 0));
-      $('.range-control--max').val($('.slider-range').slider("values", 1));
-    }
-  })
 
-  var rangeControl = $('.range-control');
-
-  rangeControl.on('input', function (e) {
-    var inputVal = $(e.target).val();
-
-    if(inputVal.match(/^\d+$/) || inputVal.length == 0){
-      
-      var max = +$('.range-control--max').val();
-      var min = +$('.range-control--min').val();
-
-      if($(this).hasClass('range-control--max') && max < min){
-        $('.range-control--max').val(min + 1000);
-      } 
-      else if ($(this).hasClass('range-control--min') && min > max){
-        $('.range-control--min').val(max - 1000)
-      }
-
-     var index = ($(this).hasClass('range-control--max') == true) ? 1 : 0;
-     $('.slider-range').slider("values", index, $(this).val());
-
-    } else {
-      $('.alert-popup').addClass('show');
-    }
-  })
-}

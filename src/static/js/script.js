@@ -2,3 +2,4 @@
 //=include slider.js
 //=include musicians.js
 //=include arrangement.js
+//=include sliderRange.js
