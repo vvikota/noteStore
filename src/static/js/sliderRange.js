@@ -36,7 +36,7 @@ if ($('.slider-range')) {
      $('.slider-range').slider("values", index, $(this).val());
 
     } else {
-      $('.alert-popup').addClass('show');
+      $(e.target).val(inputVal.slice(0, -1));
     }
   })
 }

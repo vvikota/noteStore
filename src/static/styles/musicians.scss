@@ -141,9 +141,12 @@
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  color: #969696;
+  color: #191919;
 }
 
+.musicians-search-label input::placeholder{
+  color: #969696;
+}
 
 
 .search-hint-musician li{
@@ -173,6 +176,7 @@
   position: relative;
   width: 120px;
   padding-left: 20px;
+  font-size: 14px;
   cursor: pointer;
   color: #191919;
   background: #ffffff;
