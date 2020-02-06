@@ -50,7 +50,7 @@
   border-bottom: 1px solid #ebebeb;
 }
 
-.top-breadcrumbs{
+.breadcrumbs{
   font-family: HelveticaNeueCyrRoman, sans-serif;
   font-weight: 400;
   font-size: 13px;
@@ -60,21 +60,21 @@
   margin-top: 28px;
 }
 
-.top-breadcrumbs a{
+.breadcrumbs a{
   position: relative;
   padding-right: 16px;
   color: #5897c4;
   text-decoration: none;
 }
 
-.top-breadcrumbs a:after{
+.breadcrumbs a:after{
   position: absolute;
   content: "→";
   right: 0px;
   color: #252525;
 }
 
-.top-breadcrumbs span{
+.breadcrumbs span{
   color: #252525;
 }
 
@@ -411,20 +411,20 @@
   clear: both;
 }
 
-.bottom-breadcrumbs{
+.pagination{
   padding-top: 16px;
   padding-bottom: 16px;
   border-top: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
 }
 
-.bottom-breadcrumbs .wrapper{
+.pagination .wrapper{
   display: flex;
   align-items: center;
 }
 
-.bottom-breadcrumbs .page-link{
-  padding: 10px 8.5px;
+.pagination .page-link{
+  padding: 10px;
   font-family: Roboto, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -432,23 +432,29 @@
   color: #5897c4; 
 }
 
-.bottom-breadcrumbs .curent-page{
-  padding: 10px;
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+.pagination .curent-page{
+  padding-left: 0;
   color: #f2547c;
 }
 
-.bottom-breadcrumbs .page-link:first-child{
+.pagination .page-link:first-child{
   padding-left: 0;
 }
 
-.bottom-breadcrumbs .page-link:last-child{
-  display: block;
+.pagination .prev-page-link,
+.pagination .next-page-link{
   width: 7px;
   height: 11px;
   background: #ffffff url('../img/breadcrumbs-pink-arrow.png') center no-repeat;
+}
+
+.pagination .prev-page-link{
+  display: none;
+  transform: rotate(180deg);
+}
+
+.pagination .next-page-link{
+  display: block;
 }
 
 .musicians-description{

@@ -11,18 +11,15 @@ if($('.sort-js')){
     var searchRezultItem = ('<div class="search-rezult-item">' + '<span></span>' + searchRezult + '</div>');
     var parentLi = $(target).parent().parent().parent();
 
-    // function refreshButton(amount, chooseButton){
-    //   // var amount = chooseList.find('li.picked').length;
-    //   // var defaultValue = chooseButton.val();
-
-    //   if (amount === 0 ){
-    //     chooseButton.html(defaultValue);
-    //     chooseButton.removeClass('choose-background');
-    //   } else if  (amount > 0){
-    //     chooseButton.html('Выбрано(' + amount + ')');
-    //     chooseButton.addClass('choose-background');
-    //   }
-    // }
+     function refreshButton(button, defaultValue, amount){
+       if (amount === 0 ){
+          button.html(defaultValue);
+          button.removeClass('choose-background');
+        } else if  (amount > 0){
+          button.html('Выбрано(' + amount + ')');
+          button.addClass('choose-background');
+        }
+     }
 
     if($('.search-input-musician').is(target) 
        && !searchHintMuz.hasClass('show')){
@@ -36,37 +33,38 @@ if($('.sort-js')){
         $('.search-rezult-container').append(searchRezultItem);
         $(target).addClass('picked');
         
-        // var button = parentLi.prev();
-        // var defaultValue = parentLi.prev().val();
-        // var amount = $(target).parent().find('li.picked').length;
+        var button = parentLi.prev();
+        var defaultValue = parentLi.prev().val();
+        var amount = $(target).parent().find('li.picked').length;
 
-        // if (amount === 0 ){
-        //   button.html(defaultValue);
-        //   button.removeClass('choose-background');
-        // } else if  (amount > 0){
-        //   button.html('Выбрано(' + amount + ')');
-        //   button.addClass('choose-background');
-        // }
+        refreshButton(button, defaultValue, amount);
     }
     else if(searchHintMuz.hasClass('show')){
       searchHintMuz.removeClass('show');
     }
+
+    else if ($('.choose-list-js').hasClass('show')){
+      console.log('click');
+      $('.choose-list-js').removeClass('show');
+    }
+
      else if ($(target).is('.search-rezult-item > span')){
       $(target).parent().remove();
-     
+
       var searchText = $(target).parent().html().substr(13);
-      chooseList.find( $('li.picked:contains('+searchText+')')).removeClass('picked');
-      //console.log(parentLi);
-     // refreshButton();
+      
+      var desireLi = $('.mCSB_container').find( $('li.picked:contains('+searchText+')'));
+      desireLi.removeClass('picked');
+
+      var amount = desireLi.parent().find('li.picked').length;
+      var button = desireLi.parent().parent().parent().prev();
+      var buttonValue = button.val();
+
+      refreshButton(button, buttonValue, amount);
     } 
     else if(chooseButton.is(event.target)){
        $(target).next().toggleClass('show')
     }  
-
-    else if ($('.choose-list-js').hasClass('show')){
-      $('.choose-list-js').removeClass('show');
-    }
-
     // popular and new change
     else if($('.sort-rezult-button').is(event.target) 
          && !($('.sort-rezult-list')).hasClass('show')){
@@ -81,15 +79,6 @@ if($('.sort-js')){
     else if ($('.sort-rezult-list').hasClass('show')){
       $('.sort-rezult-list').removeClass('show');
     }
-
-    // range price
-    // else if($('.close-alert').is(event.target) ){
-    //   $('.alert-popup').removeClass('show')
-    // }
-
-    // else if ($('.alert-popup').hasClass('show') && !($('.alert-message')).is(event.target)){
-    //   $('.alert-popup').removeClass('show')
-    // }
   })
 }
 

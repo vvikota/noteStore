@@ -248,7 +248,7 @@
     <main>
       <div class="top-description">
         <div class="wrapper">
-          <div class="top-breadcrumbs">
+          <div class="breadcrumbs">
             <a href="./index.html">Главная</a>
             <span>Музыканты</span>
           </div>
@@ -267,7 +267,7 @@
 
       <div class="musician-sort sort-js">
         <div class="wrapper wrapper--flex">
-          <label class="search-label musicians-search-label">
+          <label class="musicians-search-label">
             <input type="text" class="search-input-musician" name="search-input" placeholder="Поиск по музыкантам">
             <ul class="search-hint search-hint-musician m-scroll-bar">
               <li>The Beatles</li>
@@ -284,8 +284,8 @@
             <button></button>
           </label>
           <div class="choose-year">
-            <button class="choose-year__button" value="Год">Год</button>
-            <ul class="choose-year__list search-hint m-scroll-bar">
+            <button class="choose-year__button choose-button-js" value="Год">Год</button>
+            <ul class="choose-year__list search-hint m-scroll-bar choose-list-js">
               <li>1987</li>
               <li>1988</li>
               <li>1989</li>
@@ -410,8 +410,9 @@
         </div>
       </div>
 
-      <div class="bottom-breadcrumbs">
+      <div class="pagination">
         <div class="wrapper">
+          <a href="#" class="page-link prev-page-link"></a>
           <span class="page-link curent-page">1</span>
           <a href="#" class="page-link">2</a>
           <a href="#" class="page-link">3</a>
@@ -421,7 +422,7 @@
           <a href="#" class="page-link">7</a>
           <a href="#" class="page-link">8</a>
           <a href="#" class="page-link">9</a>
-          <a href="#" class="page-link"></a>
+          <a href="#" class="page-link next-page-link"></a>
         </div>
       </div>
 
@@ -519,12 +520,6 @@
       </section>
       <!-- =include ./component/navMenu.html -->
     </footer>
-    <div class="alert-popup">
-      <div class="alert-message">
-        Вводить нужно цифры!!!
-        <button class="close-alert"></button>
-      </div>
-    </div>
   </div>
 
   <script src="./libs/jqerry.js"></script>
