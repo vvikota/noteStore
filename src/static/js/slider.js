@@ -25,7 +25,6 @@ if (notesSlider) {
 
   var noteList = $('.note-card');
 
-  
   function noteSliderSpotter(){
     
     function marginSpotter(sliderMargin, slidesAmount) {   
@@ -35,12 +34,9 @@ if (notesSlider) {
 
     if (window.innerWidth <= 1320 && window.innerWidth >= 1000){ 
       marginSpotter(40, 4)
-
     } else if (window.innerWidth <= 1000 && window.innerWidth >= 765){
       marginSpotter(75, 3)
-
-    } 
-    else if (window.innerWidth <= 765 && window.innerWidth >= 630){
+    } else if (window.innerWidth <= 765 && window.innerWidth >= 630){
       marginSpotter(75,2)
     }
   }
@@ -53,6 +49,3 @@ if (notesSlider) {
     noteSliderSpotter();
   })
 }
-
-
-       

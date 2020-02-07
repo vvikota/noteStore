@@ -34,8 +34,7 @@ if(bodyWrapper){
       $('.language-change-menu--mobile').toggleClass('open-language-menu')
 
     } else if(langChangeButDesk.is(event.target)){
-      langChangeDesk.toggleClass('open-language-menu')
-    
+      langChangeDesk.toggleClass('open-language-menu');
     } else if($('.social-link-arrow').is(event.target)) {
       event.stopPropagation();
       hiddenSocialMenu.toggleClass('hidden-link-open');

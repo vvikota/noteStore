@@ -10,26 +10,34 @@ if($('.sort')){
     var searchRezultItem = ('<div class="search-rezult-item">' + '<span></span>' + searchRezult + '</div>');
     var parentLi = $(target).parent().parent().parent();
 
-     function refreshButton(button, defaultValue, amount){
-       if (amount === 0 ){
-          button.html(defaultValue);
-          button.removeClass('choose-background');
-        } else if  (amount > 0){
-          button.html('Выбрано(' + amount + ')');
-          button.addClass('choose-background');
-        }
-     }
+    function refreshButton(button, defaultValue, amount){
+      if (amount === 0 ){
+        button.html(defaultValue);
+        button.removeClass('choose-background');
+      } else if  (amount > 0){
+        button.html('Выбрано(' + amount + ')');
+        button.addClass('choose-background');
+      }
+    }
+
+    function checkDouble(){
+      var double = $('.sort-rezult-keys').find( $('.search-rezult-item:contains('+searchRezult+')'));
+      if($(double).length === 0 ){
+        $('.sort-rezult-keys').append(searchRezultItem);
+      } 
+    }
 
     if($('.search-input').is(target) 
        && !searchHintMain.hasClass('show')){
-          searchHintMain.addClass('show');
+          searchHintMain.addClass('show'); 
     } 
     
     else if($(target).is('.mCSB_container > li') && parentLi.hasClass('search-hint-main')){      
-        $('.sort-rezult-keys').append(searchRezultItem);
+        checkDouble();
         
     } else if  ($(target).is('.mCSB_container > li') && !parentLi.hasClass('search-hint-main')){
-        $('.sort-rezult-keys').append(searchRezultItem);
+        checkDouble();
+        
         $(target).addClass('picked');
         
         var button = parentLi.prev();
@@ -52,7 +60,7 @@ if($('.sort')){
       var searchText = $(target).parent().html().substr(13);
       
       var desireLi = $('.mCSB_container').find( $('li.picked:contains('+searchText+')'));
-      desireLi.removeClass('picked');
+          desireLi.removeClass('picked');
 
       var amount = desireLi.parent().find('li.picked').length;
       var button = desireLi.parent().parent().parent().prev();
@@ -79,5 +87,3 @@ if($('.sort')){
     }
   })
 }
-
-
