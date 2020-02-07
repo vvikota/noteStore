@@ -1,7 +1,3 @@
-.choose-arrangement{
-  position: relative;
-  margin-right: 5px;
-}
 
 .selection-button--arrangement{
   position: relative;
@@ -28,35 +24,36 @@
   background: url(../img/select-arrow.png) no-repeat;
 }
 
-.choose-arrangement__list li{
-  font-family: Roboto,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-}
+// .choose-arrangement__list li{
+//   font-family: Roboto,sans-serif;
+//   font-size: 14px;
+//   font-weight: 400;
+// }
 
-.choose-arrangement__list li:hover{
-  background-color: #ffffff;
-  color: #f25d82;
-}
+// .choose-arrangement__list li:hover{
+//   background-color: #ffffff;
+//   color: #f25d82;
+// }
 
-.arrangement{
-  margin-bottom: 0;
-}
+// .arrangement{
+//   margin-bottom: 0;
+// }
 
-.arrangement-card{
+.arrangement .rezult-item{
   margin-bottom: 42px;
   min-height: 305px;
 }
-.arrangement-card .description-block{
+
+.arrangement .rezult-description{
   width: 185px;
 }
 
-.arrangement-card .product-instrument{
+.arrangement .product-instrument{
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-.arrangement-card .product-price{
+.arrangement .product-price{
   margin-top: 11px;
   font-family: Roboto, sans-serif;
   font-size: 14px;
@@ -64,15 +61,15 @@
   color: #191919;
 }
 
-.arrangement-card .product-price.free{
+.arrangement .product-price.free{
   color: #94c304; 
 }
 
 @media screen and (max-width: 1285px){
-  .choose-arrangement{
-     margin-bottom: 10px;
-     margin-right: 15px;
-  }
+  // .choose-arrangement{
+  //    margin-bottom: 10px;
+  //    margin-right: 15px;
+  // }
 }
 
 @media screen and (max-width: 850px){
