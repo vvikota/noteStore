@@ -265,11 +265,12 @@
         </div>
       </div>
 
-      <div class="musician-sort sort-js">
+      <div class="sort">
         <div class="wrapper wrapper--flex">
-          <label class="musicians-search-label">
-            <input type="text" class="search-input-musician" name="search-input" placeholder="Поиск по музыкантам">
-            <ul class="search-hint search-hint-musician m-scroll-bar">
+
+          <label class="search-area">
+            <input type="text" class="search-input" name="search-input" placeholder="Поиск по музыкантам">
+            <ul class="search-hint search-hint-main m-scroll-bar">
               <li>The Beatles</li>
               <li>The Inc Spots</li>
               <li>Lynyrd Skynyrd</li>
@@ -283,9 +284,10 @@
             </ul>
             <button></button>
           </label>
-          <div class="choose-year">
-            <button class="choose-year__button choose-button-js" value="Год">Год</button>
-            <ul class="choose-year__list search-hint m-scroll-bar choose-list-js">
+
+          <div class="selection-area">
+            <button class="selection-button selection-button--year js-choose-button" value="Год">Год</button>
+            <ul class="selection-list search-hint m-scroll-bar js-choose-list">
               <li>1987</li>
               <li>1988</li>
               <li>1989</li>
@@ -299,16 +301,10 @@
               <li>1998</li>
               <li>1999</li>
               <li>2000</li>
-              <li>2001</li>
-              <li>2002</li>
-              <li>2003</li>
-              <li>2004</li>
-              <li>2005</li>
-              <li>2006</li>
-              <li>2007</li>
             </ul>
           </div>
-          <div class="range-price">
+
+          <div class="range-price-area">
             <span class="range-price-description">Цена, руб. </span>
             <div class="range-control-wrapper">
               <input class="range-control range-control--min">
@@ -316,25 +312,25 @@
               <input class="range-control range-control--max">
             </div>
           </div>
-          <label class="only-free-checkbox">
+
+          <label class="checkbox-area">
             <input type="checkbox">
             <span>Только бесплатные</span>
           </label>
         </div>
       </div>
 
-      <div class="sort-rezult musician-sort-rezult">
+      <div class="sort-rezult">
         <div class="wrapper wrapper--flex">
-          <span class="rezults-number">Показаны результаты 1-16 из 256</span>
-          <div class="search-rezult-container"></div>
-          <div class="rezult-sorting-wrapper">
+          <span class="sort-rezult-number">Показаны результаты 1-16 из 256</span>
+          <div class="sort-rezult-keys"></div>
+          <div class="sort-rezult-button-wrapper">
             <button class="sort-rezult-button">Сортировать по</button>
             <ul class="sort-rezult-list search-hint">
               <li>Популярные</li>
               <li>Новые</li>
             </ul>
           </div>
-
         </div>
       </div>
 

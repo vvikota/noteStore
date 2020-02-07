@@ -1,11 +1,11 @@
-if($('.sort-js')){
-  var searchHintMuz = $('.search-hint-musician'); 
-  var chooseButton = $('.choose-button-js');
+if($('.sort')){
+  var searchHintMuz = $('.search-hint-main'); 
+  var chooseButton = $('.js-choose-button');
   
   $('.m-scroll-bar').mCustomScrollbar();
  
   $(document).click(function(event) {
-    var chooseList = $('.choose-list-js .mCSB_container');
+    var chooseList = $('.js-choose-list .mCSB_container');
     var target = event.target; 
     var searchRezult = $(target).html();
     var searchRezultItem = ('<div class="search-rezult-item">' + '<span></span>' + searchRezult + '</div>');
@@ -26,10 +26,10 @@ if($('.sort-js')){
           searchHintMuz.addClass('show');
     } 
     
-    else if($(target).is('.mCSB_container > li') && parentLi.hasClass('search-hint-musician')){      
+    else if($(target).is('.mCSB_container > li') && parentLi.hasClass('search-hint-main')){      
         $('.search-rezult-container').append(searchRezultItem);
         
-    } else if  ($(target).is('.mCSB_container > li') && !parentLi.hasClass('search-hint-musician')){
+    } else if  ($(target).is('.mCSB_container > li') && !parentLi.hasClass('search-hint-main')){
         $('.search-rezult-container').append(searchRezultItem);
         $(target).addClass('picked');
         
@@ -43,8 +43,8 @@ if($('.sort-js')){
       searchHintMuz.removeClass('show');
     }
 
-    else if ($('.choose-list-js').hasClass('show')){
-      $('.choose-list-js').removeClass('show');
+    else if ($('.js-choose-list').hasClass('show')){
+      $('.js-choose-list').removeClass('show');
     }
 
      else if ($(target).is('.search-rezult-item > span')){

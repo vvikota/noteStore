@@ -97,27 +97,27 @@
   color: #5897c4;
 }
 
-.musician-sort{
+.sort{
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
 
-.musician-sort .wrapper{
+.sort .wrapper{
   align-items: center;
   flex-wrap: wrap;
 }
 
-.musicians-search-label{
+.search-area{
   position: relative;
   display: flex;
 }
 
-.musicians-search-label input,
-.musicians-search-label button,
-.choose-year__button,
-.range-price,
-.only-free-checkbox,
+.search-area input,
+.search-area button,
+.selection-button,
+.range-price-area,
+.checkbox-area,
 .sort-rezult-button{
   display: flex;
   align-items: center;
@@ -127,14 +127,14 @@
   outline: none;
 }
 
-.musicians-search-label,
-.choose-year,
-.range-price,
-.only-free-checkbox{
+.search-area,
+.selection-area,
+.range-price-area,
+.checkbox-area{
   margin-right: 5px;
 }
 
-.musicians-search-label input{
+.search-area input{
   width: 310px;
   padding: 6px 13px;
   font-family: Roboto, sans-serif;
@@ -144,35 +144,35 @@
   color: #191919;
 }
 
-.musicians-search-label input::placeholder{
+.search-area input::placeholder{
   color: #969696;
 }
 
 
-.search-hint-musician li{
+.sort .search-hint li{
   font-family: Roboto, sans-serif;
   font-size: 14px;
   color: #222222;
   font-weight: 400;
 }
 
-.search-hint-musician li:hover{
+.sort .search-hint li:hover{
   background-color: transparent;
   color: #f25d82;
 }
 
-.musicians-search-label button{
+.search-area button{
   width: 47px;
   background-color: #f7f7f7;
   background: #f7f7f7 url('../img/search-icon-pink.png') center no-repeat;
   border-left: none;
 }
 
-.choose-year{
+.selection-area{
   position: relative;
 }
 
-.choose-year__button{
+.selection-button{
   position: relative;
   width: 120px;
   padding-left: 20px;
@@ -182,7 +182,7 @@
   background: #ffffff;
 }
 
-.choose-year__button:after{
+.selection-button:after{
   position: absolute;
   content: "";
   width: 11px;
@@ -192,13 +192,13 @@
   background: url('../img/select-arrow.png') no-repeat;
 }
 
-.choose-year__list li{
+.selection-list li{
   font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
 
-.choose-year__list li:hover{
+.selection-list li:hover{
   background: transparent;
   color: #f25d82;
 }
@@ -215,7 +215,7 @@
   background-color: #f1f1f1;
 }
 
-.range-price{
+.range-price-area{
   display: flex;
   justify-content: space-between;
   width: 503px;
@@ -242,7 +242,7 @@
   border: 1px solid #cacaca;
 }
 
-.range-price .slider-range{
+.range-price-area .slider-range{
   width: 215px;
   height: 7px;
   background-color: #e2e2e2;
@@ -262,7 +262,7 @@
   cursor: pointer;
 }
 
-.only-free-checkbox,
+.checkbox-area,
 .range-control,
 .range-price-description{
   font-family: Roboto, sans-serif;
@@ -271,7 +271,7 @@
   color: #212121;
 }
 
-.only-free-checkbox{
+.checkbox-area{
   position: relative;
   width: 193px;
   padding-left: 14px;
@@ -279,7 +279,7 @@
   cursor: pointer;
 }
 
-.only-free-checkbox span:before{
+.checkbox-area span:before{
   position: absolute;
   content: "";
   width: 20px;
@@ -289,7 +289,7 @@
   border: 1px solid #cacaca;
 }
 
-.only-free-checkbox span:after{
+.checkbox-area span:after{
   display: none;
   position: absolute;
   content: "";
@@ -303,11 +303,11 @@
   border-radius: 2px;
 }
 
-.only-free-checkbox input:checked + span:after{
+.checkbox-area input:checked + span:after{
   display: block;
 }
 
-.only-free-checkbox input{
+.checkbox-area input{
   display: none;
 }
 
@@ -322,7 +322,7 @@
   align-items: center;
 }
 
-.rezults-number{
+.sort-rezult-number{
   font-family: Roboto, sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -332,7 +332,7 @@
   margin-right: 55px;
 }
 
-.search-rezult-container{
+.sort-rezult-keys{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -362,7 +362,7 @@
   cursor: pointer;
 }
 
-.rezult-sorting-wrapper{
+.sort-rezult-button-wrapper{
   position: relative;
 }
 
@@ -476,20 +476,20 @@
 }
 
 @media screen and (max-width: 1285px) {
-  .musicians-search-label,
-  .choose-year,
-  .range-price,
+  .search-area,
+  .selection-area,
+  .range-price-area,
   .only-free-checkbox {
     margin-bottom: 10px;
   }
 
-  .musician-sort .wrapper{
+  .sort .wrapper{
     justify-content: flex-start;
   }
 
-  .musicians-search-label,
-  .choose-year,
-  .range-price,
+  .search-area,
+  .selection-area,
+  .range-price-area,
   .only-free-checkbox{
   margin-right: 15px;
   }
@@ -520,31 +520,31 @@
 }
 
 @media screen and (max-width: 850px) {
-  .musician-sort .wrapper{
+  .sort .wrapper{
     flex-direction: column;
   }
 
-  .musicians-search-label,
-  .choose-year,
-  .choose-year__button,
-  .range-price,
-  .only-free-checkbox{
+  .search-area,
+  .selection-area,
+  .selection-button,
+  .range-price-area,
+  .checkbox-area{
     width: 100%;
   }
 
-  .musicians-search-label,
-  .choose-year,
-  .range-price,
-  .only-free-checkbox{
+  .search-area,
+  .selection-area,
+  .range-price-area,
+  .checkbox-area{
     width: 100%;
     margin-bottom: 20px;
   }
 
-  .musicians-search-label .search-input-musician{
+  .search-area .search-input{
     width: calc(100% - 47px);
   }
 
-  .only-free-checkbox {
+  .checkbox-area {
     margin-right: auto;
     margin-bottom: 0;
   }
@@ -600,25 +600,25 @@
     flex-direction: column;
   }
   
-  .rezults-number{
+  .sort-rezult-number{
     padding-bottom: 10px
   }
 
-  .rezult-sorting-wrapper{
+  .sort-rezult-button-wrapper{
     padding-top: 5px;
   }
 
-  .musician-sort {
+  .sort {
     padding-bottom: 20px;
   }
 
-  .rezults-number {
+  .sort-rezult-number {
     margin-right: 0;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .range-price{
+  .range-price-area{
     flex-direction: column;
     height: 85px;
     padding: 15px 28px 18px 15px;
@@ -631,7 +631,7 @@
     overflow: hidden;
   }
 
-  .range-price{
+  .range-price-area{
     height: 118px;
   }
 
@@ -660,11 +660,11 @@
     flex-direction: column;
   }
 
-  .rezult-number{
+  .sort-rezult-number{
     margin-bottom: 15px;
   }
 
-  .rezult-sorting-wrapper,
+  .sort-rezult-button-wrapper,
   .sort-rezult-button{
     width: 100%;
   }
@@ -719,7 +719,7 @@
     margin-bottom: 12px;
   }
 
-  .musician-sort {
+  .sort {
     padding-top: 20px;
   }
 

@@ -1,4 +1,4 @@
-if ($('.slider-range')) {
+if ($('.range-price-area')) {
   $('.slider-range').slider({
     range: true,
     min: 0,
