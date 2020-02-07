@@ -28,24 +28,20 @@ if (notesSlider) {
   
   function noteSliderSpotter(){
     
-    function marginSpotter() {
-      for( var i = 0; i < noteList.length; i++){
-        noteList[i].style.marginRight = marginR + 'px';
-      }
+    function marginSpotter(sliderMargin, slidesAmount) {   
+        var marginR = Math.round((window.innerWidth - sliderMargin*2 - 195*slidesAmount - 20)/(slidesAmount-1) )   
+        noteList.css("marginRight", marginR + 'px');
     }
 
     if (window.innerWidth <= 1320 && window.innerWidth >= 1000){ 
-      var marginR = Math.round((window.innerWidth - 860 - 20) / 3); 
-      marginSpotter()
+      marginSpotter(40, 4)
 
     } else if (window.innerWidth <= 1000 && window.innerWidth >= 765){
-      var marginR = Math.round((window.innerWidth - 75*2 - 195*3 - 20) / 2); 
-      marginSpotter()
+      marginSpotter(75, 3)
 
     } 
     else if (window.innerWidth <= 765 && window.innerWidth >= 630){
-      var marginR = Math.round((window.innerWidth - 75*2 - 195*2 - 20)); 
-      marginSpotter()
+      marginSpotter(75,2)
     }
   }
 

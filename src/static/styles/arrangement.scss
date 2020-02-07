@@ -3,7 +3,7 @@
   margin-right: 5px;
 }
 
-.choose-arrangement__button{
+.selection-button--arrangement{
   position: relative;
   align-items: center;
   position: relative;
@@ -18,7 +18,7 @@
   cursor: pointer;
 }
 
-.choose-arrangement__button:after {
+.selection-button--arrangement:after {
   position: absolute;
   content: "";
   width: 11px;
