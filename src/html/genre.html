@@ -248,7 +248,7 @@
     <main>
       <div class="top-description">
         <div class="wrapper">
-          <div class="top-breadcrumbs">
+          <div class="breadcrumbs">
             <a href="./index.html">Главная</a>
             <span>Жанры</span>
           </div>
@@ -261,15 +261,16 @@
             объект, способный запасать подведённую энергию в виде колебаний. Резонансная частота резонатора определяет
             основной тон (первый обертон) производимого звука.
           </p>
-          <a class="top-description-text-more" href="#">Читать полностью</a>
+          <a class="top-description-text-more" href="#fullArticle">Читать полностью</a>
         </div>
       </div>
 
-      <div class="musician-sort">
+      <div class="sort">
         <div class="wrapper wrapper--flex">
-          <div class="choose-arrangement">
-            <button class="choose-arrangement__button" value="Выберите жанр">Выберите жанр</button>
-            <ul class="choose-arrangement__list search-hint m-scroll-bar">
+
+          <div class="selection-area">
+            <button class="selection-button selection-button--main js-choose-button" value="Выберите аранжировку">Выберите жанр</button>
+            <ul class="selection-list search-hint m-scroll-bar js-choose-list">
               <li>The Beatles</li>
               <li>The Inc Spots</li>
               <li>Lynyrd Skynyrd</li>
@@ -282,9 +283,10 @@
               <li>Otto Klemperer</li>
             </ul>
           </div>
-          <div class="choose-year">
-            <button class="choose-year__button" value="Год">Год</button>
-            <ul class="choose-year__list search-hint m-scroll-bar">
+
+          <div class="selection-area">
+            <button class="selection-button selection-button--year js-choose-button" value="Год">Год</button>
+            <ul class="selection-list search-hint m-scroll-bar js-choose-list">
               <li>1987</li>
               <li>1988</li>
               <li>1989</li>
@@ -298,16 +300,10 @@
               <li>1998</li>
               <li>1999</li>
               <li>2000</li>
-              <li>2001</li>
-              <li>2002</li>
-              <li>2003</li>
-              <li>2004</li>
-              <li>2005</li>
-              <li>2006</li>
-              <li>2007</li>
             </ul>
           </div>
-          <div class="range-price">
+
+          <div class="range-price-area">
             <span class="range-price-description">Цена, руб. </span>
             <div class="range-control-wrapper">
               <input class="range-control range-control--min">
@@ -315,34 +311,34 @@
               <input class="range-control range-control--max">
             </div>
           </div>
-          <label class="only-free-checkbox">
+
+          <label class="checkbox-area">
             <input type="checkbox">
             <span>Только бесплатные</span>
           </label>
         </div>
       </div>
 
-      <div class="sort-rezult musician-sort-rezult">
+      <div class="sort-rezult">
         <div class="wrapper wrapper--flex">
-          <span class="rezults-number">Показаны результаты 1-16 из 256</span>
-          <div class="search-rezult-container"></div>
-          <div class="rezult-sorting-wrapper">
+          <span class="sort-rezult-number">Показаны результаты 1-16 из 256</span>
+          <div class="sort-rezult-keys"></div>
+          <div class="sort-rezult-button-wrapper">
             <button class="sort-rezult-button">Сортировать по</button>
             <ul class="sort-rezult-list search-hint">
               <li>Популярные</li>
               <li>Новые</li>
             </ul>
           </div>
-
         </div>
       </div>
 
-      <div class="musicians-block arrangement">
+      <div class="rezult-area genre">
         <div class="wrapper clearfix">
           
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"><img src="./img/musicians_1.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"><img src="./img/musicians_1.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   The Beatles - Yesterday, 1961
                 </a>
@@ -351,9 +347,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"><img src="./img/musicians_2.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"><img src="./img/musicians_2.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   The Inc Spots - Mayby, 1936
                 </a>
@@ -362,9 +358,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"> <img src="./img/musicians_3.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"> <img src="./img/musicians_3.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   Lynyrd Skynyrd Gimme Three
                   Steps, 1976
@@ -374,9 +370,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"> <img src="./img/musicians_4.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"> <img src="./img/musicians_4.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   Louis - The Best Of Louis Armstrong - When You're Smiling, 1951
                 </a>
@@ -385,9 +381,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"><img src="./img/musicians_1.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"><img src="./img/musicians_1.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   The Beatles - Yesterday, 1961
                 </a>
@@ -396,9 +392,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"><img src="./img/musicians_2.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"><img src="./img/musicians_2.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   The Inc Spots - Mayby, 1936
                 </a>
@@ -407,9 +403,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"> <img src="./img/musicians_3.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"> <img src="./img/musicians_3.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   Lynyrd Skynyrd Gimme Three
                   Steps, 1976
@@ -419,9 +415,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"> <img src="./img/musicians_4.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"> <img src="./img/musicians_4.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   Louis - The Best Of Louis Armstrong - When You're Smiling, 1951
                 </a>
@@ -430,9 +426,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"><img src="./img/musicians_1.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"><img src="./img/musicians_1.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   The Beatles - Yesterday, 1961
                 </a>
@@ -441,9 +437,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"><img src="./img/musicians_2.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"><img src="./img/musicians_2.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   The Inc Spots - Mayby, 1936
                 </a>
@@ -452,9 +448,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"> <img src="./img/musicians_3.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"> <img src="./img/musicians_3.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   Lynyrd Skynyrd Gimme Three
                   Steps, 1976
@@ -464,9 +460,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"> <img src="./img/musicians_4.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"> <img src="./img/musicians_4.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   Louis - The Best Of Louis Armstrong - When You're Smiling, 1951
                 </a>
@@ -475,9 +471,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"><img src="./img/musicians_1.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"><img src="./img/musicians_1.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   The Beatles - Yesterday, 1961
                 </a>
@@ -486,9 +482,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"><img src="./img/musicians_2.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"><img src="./img/musicians_2.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   The Inc Spots - Mayby, 1936
                 </a>
@@ -497,9 +493,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"> <img src="./img/musicians_3.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"> <img src="./img/musicians_3.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   Lynyrd Skynyrd Gimme Three
                   Steps, 1976
@@ -509,9 +505,9 @@
               </div>
             </div>
 
-            <div class="musician-card arrangement-card">
-              <a href="#" class="musician-card-img-wrapper"> <img src="./img/musicians_4.jpg" alt="img"></a>
-              <div class="description-block">
+            <div class="rezult-item">
+              <a href="#" class="rezult-img-wrapper"> <img src="./img/musicians_4.jpg" alt="img"></a>
+              <div class="rezult-description">
                 <a href="#" class="product-name">
                   Louis - The Best Of Louis Armstrong - When You're Smiling, 1951
                 </a>
@@ -523,8 +519,9 @@
         </div>
       </div>
 
-      <div class="bottom-breadcrumbs">
+      <div class="pagination">
         <div class="wrapper">
+          <a href="#" class="page-link prev-page-link"></a>
           <span class="page-link curent-page">1</span>
           <a href="#" class="page-link">2</a>
           <a href="#" class="page-link">3</a>
@@ -534,11 +531,11 @@
           <a href="#" class="page-link">7</a>
           <a href="#" class="page-link">8</a>
           <a href="#" class="page-link">9</a>
-          <a href="#" class="page-link"></a>
+          <a href="#" class="page-link next-page-link"></a>
         </div>
       </div>
 
-      <div class="musicians-description wrapper">
+      <div class="bottom-page-description wrapper" id="fullArticle">
         <h2>Жанры</h2>
         <p>
           Физическая основа музыкального инструмента, производящего музыкальные звуки (за исключением электрических
