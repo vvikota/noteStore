@@ -23,7 +23,7 @@ if (notesSlider) {
     notesSlider.addClass('ready-slider');
   });
 
-  var noteList = $('.note-card');
+  var noteList = $('.js-note-card');
 
   function noteSliderSpotter(){
     

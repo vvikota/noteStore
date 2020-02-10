@@ -1,0 +1,92 @@
+.musicset{
+  margin-bottom: 0;
+}
+
+.musicset .note-card{
+  float: left;
+  width: 195px;
+  margin-right: calc((100% - 780px)/3);
+  margin-bottom: 61px;
+}
+
+.musicset .note-card:nth-child(4n){
+  margin-right: 0;
+}
+
+.musicset .note-card:nth-last-child(-n+4){
+  margin-bottom: 43px;
+}
+
+.musicset .note-card-text {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1000px){
+  .musicset .note-card,
+  .musicset .note-card:nth-child(4n){
+    margin-right: calc((100% - 585px)/2);
+    margin-bottom: 61px;
+  }
+
+  .musicset .note-card:nth-child(3n){
+    margin-right: 0;
+  }
+
+  .musicset .note-card:last-child{
+    margin-bottom: 34px;
+  }
+
+  .musicset {
+    margin-bottom: 9px;
+  }
+}
+
+@media screen and (max-width: 690px){
+  .musicset .note-card,
+  .musicset .note-card:nth-child(4n),
+  .musicset .note-card:nth-child(3n){
+    margin-right: 0;
+  }
+
+  .musicset .wrapper{
+    flex-direction: column;
+  }
+
+  .musicset .note-card{
+    flex-direction: row;
+    float: inherit;
+    margin-bottom: 30px;
+    width: auto;
+  }
+
+  .musicset .note-card:nth-child(4n),
+  .musicset .note-card:nth-last-child(-n+4){
+    margin-bottom: 30px;
+  }
+
+  .note-card-text {
+    justify-content: flex-start;
+    padding-left: 21px;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .musicset .image-block img,
+  .musicset .image-block:after{
+    width: 102px;
+    height: 94px;
+  }
+
+  .musicset .image-block{
+    padding-top: 5px;
+    padding-left: 5px;
+  }
+
+  .musicset .note-card:last-child{
+    margin-bottom: 17px;
+  }
+
+  .musicset .note-card-text{
+    margin-top: 3px;
+  }
+}

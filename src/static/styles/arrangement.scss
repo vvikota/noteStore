@@ -81,6 +81,11 @@
 }
 
 @media screen and (max-width: 510px){
+  .arrangement{
+    padding-top: 40px;
+    margin-bottom: 0;
+  }
+
   .arrangement .wrapper,
   .genre .wrapper{
     display: flex;
@@ -95,7 +100,7 @@
 
   .arrangement .rezult-description,
   .genre .rezult-description{
-    margin-left: 15px;
+    margin-left: 21px;
   }
 
   .arrangement .rezult-description,
