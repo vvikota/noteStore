@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <title>Music portal</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="./libs/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./libs/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="./libs/JQUI/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="./libs/mCustomScrollbar/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="body-wrapper">
+    <section class="portal-nav portal-nav--mobile">
+      <div class="nav-wrapper">
+        <div class="nav--mobile-top-block">
+          <span class="nav-icon"></span>
+          <button class="close-mobile-menu"></button>
+        </div>
+        <div class="tablet-menu-registration">
+          <button class="entry">Вход</button>
+          <button class="registration">Регистрация</button>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="musicians.html">Музыканты</a></li>
+            <li><a href="arrangement.html">Аранжировки</a></li>
+            <li><a href="genre.html">Жанры</a></li>
+            <li><a href="#">Нотные наборы</a></li>
+          </ul>
+        </nav>
+        <div class="custom-nav">
+          <a href="#" class="note-order-link">Заказать ноты</a>
+          <a href="#" class="market-link">Магазин музыкальных инструментов</a>
+        </div>
+        <div class="language-change-block">
+          <p>Страна/Валюта</p>
+          <button class="language-change language-change--tablet"></button>
+        </div>
+      </div>
+
+      <div class="language-change-menu language-change-menu--mobile">
+        <div class="language-change-list">
+          <h4>Язык</h4>
+
+          <label>
+            <input type="radio" name="language" value="rus" checked>
+            <p class="input-text rus"> Русский </p>
+          </label>
+
+          <label>
+            <input type="radio" name="language" value="eng">
+            <p class="input-text eng"> English </p>
+          </label>
+
+          <label>
+            <input type="radio" name="language" value="fr">
+            <p class="input-text fr"> Français</p>
+          </label>
+
+          <label>
+            <input type="radio" name="language" value="deu">
+            <p class="input-text deu"> Deutsch</p>
+          </label>
+
+          <label>
+            <input type="radio" name="language" value="esp">
+            <p class="input-text esp"> Español</p>
+          </label>
+
+        </div>
+        <div class="currency-change-list">
+          <h4>Валюта</h4>
+
+          <label>
+            <input type="radio" name="currency" value="rub" checked>
+            <p class="input-text rub"> Рубль РФ</p>
+          </label>
+
+          <label>
+            <input type="radio" name="currency" value="doll">
+            <p class="input-text doll"> Доллар США</p>
+          </label>
+
+          <label>
+            <input type="radio" name="currency" value="funt">
+            <p class="input-text funt"> Английский фунт</p>
+          </label>
+
+          <label>
+            <input type="radio" name="currency" value="euro">
+            <p class="input-text euro"> Евро</p>
+          </label>
+        </div>
+      </div>
+
+      <div class="header-tel header-tel--menu">
+        Поддержка:
+        <a href="tel:+74952680496">+7 (495) 268-04-96</a>
+      </div>
+
+    </section>
+
+    <header>
+      <section class="header-contact">
+        <div class="wrapper wrapper--flex">
+          <div class="header-tel">
+            Поддержка:
+            <a href="tel:+74952680496">+7 (495) 268-04-96</a>
+          </div>
+          <div class="header-social-link">
+            <p>Напишите нам</p>
+            <a href="#" class="social-link-whats"></a>
+            <a href="#" class="social-link-telegram"></a>
+            <a href="#" class="social-link-vk"></a>
+            <button class="social-link-arrow"></button>
+            <div class="hidden-social-link">
+              <div class="link-container">
+                <a href="#" class="social-link-viber"></a>
+                <a href="#" class="social-link-facebook"></a>
+                <a href="#" class="social-link-gplus"></a>
+                <a href="#" class="social-link-skype"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="header-content">
+        <div class="wrapper wrapper--flex">
+          <div class="header-content-left">
+            <a href="./index.html" class="logo logo--header">
+              <img src="./img/logo.png" alt="logo">
+            </a>
+            <label class="header-content-label">
+              <input type="text" name="search-input" class="header-content-input"
+                placeholder="Поиск по нотам, музыкантам, жанрам">
+              <ul class="search-hint search-hint--header m-scroll-bar">
+                <li>Bob Marley</li>
+                <li>Limp Bizkit</li>
+                <li>Linkin Park</li>
+                <li>Metalica</li>
+                <li>Pink Floyd</li>
+              </ul>
+              <button class="search-button"></button>
+            </label>
+
+          </div>
+          <div class="header-content-setting">
+            <button class="language-change language-change--desktop"></button>
+            <div class="language-change-menu language-change-menu--desktop">
+              <div class="language-change-list">
+                <h4>Язык</h4>
+
+                <label>
+                  <input type="radio" name="language" value="rus" checked>
+                  <p class="input-text rus"> Русский </p>
+                </label>
+
+                <label>
+                  <input type="radio" name="language" value="eng">
+                  <p class="input-text eng"> English </p>
+                </label>
+
+                <label>
+                  <input type="radio" name="language" value="fr">
+                  <p class="input-text fr"> Français</p>
+                </label>
+
+                <label>
+                  <input type="radio" name="language" value="deu">
+                  <p class="input-text deu"> Deutsch</p>
+                </label>
+
+                <label>
+                  <input type="radio" name="language" value="esp">
+                  <p class="input-text esp"> Español</p>
+                </label>
+
+              </div>
+              <div class="currency-change-list">
+                <h4>Валюта</h4>
+
+                <label>
+                  <input type="radio" name="currency" value="rub" checked>
+                  <p class="input-text rub"> Рубль РФ</p>
+                </label>
+
+                <label>
+                  <input type="radio" name="currency" value="doll">
+                  <p class="input-text doll"> Доллар США</p>
+                </label>
+
+                <label>
+                  <input type="radio" name="currency" value="funt">
+                  <p class="input-text funt"> Английский фунт</p>
+                </label>
+
+                <label>
+                  <input type="radio" name="currency" value="euro">
+                  <p class="input-text euro"> Евро</p>
+                </label>
+              </div>
+            </div>
+            <div class="header-content-registration">
+              <button class="entry">Вход</button>
+              <button class="registration">Регистрация</button>
+            </div>
+            <div class="header-content-basket not-empty">
+              <p>5</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portal-nav portal-nav--desktop">
+        <div class="nav-wrapper">
+
+          <nav>
+            <ul>
+              <li><a href="musicians.html">Музыканты</a></li>
+              <li><a href="arrangement.html">Аранжировки</a></li>
+              <li><a href="genre.html">Жанры</a></li>
+              <li><a href="#">Нотные наборы</a></li>
+            </ul>
+          </nav>
+
+          <div class="custom-nav">
+            <a href="#" class="note-order-link">Заказать ноты</a>
+            <a href="#" class="market-link">Магазин музыкальных инструментов</a>
+          </div>
+
+        </div>
+
+      </section>
+      <button class="nav-toogle"></button>
+      <div class="backdrop"></div>
+
+    </header>
+
+    <main>
+      <div class="form-block">
+        <div class="wrapper">
+          <div class="breadcrumbs">
+            <a href="./index.html">Главная</a>
+            <span>Заказ нот</span>
+          </div>
+          <h1>Закажи ноты любимой песни</h1>
+          <div class="form-description">
+            <h4>Создание нот любого произведения под заказ за </h4>
+             <a href="#"> 1 неделю</a>
+             <h5>В комплект входит:</h5>
+             <ul>
+               <li>аккомпанемент песни;</li>
+               <li>аккомпанемент и вокал;</li>
+               <li>ноты в PDF файле</li>
+               <li>пример игры на фортепиано</li>
+               <li>исходный файл для корректировок</li>
+             </ul>
+             <span>Цена:<i>1000 руб.</i></span>
+          </div>
+
+          <div class="form-area">
+            <form action="#">
+              <label for=""><span></span><input type="text"></label>
+              <label for=""><span></span><input type="text"></label>
+              <label for=""><span></span><input type="text"></label>
+              <button type="submit">Отправить</button>
+              <label for=""><input type="checkbox"> Нажимая на кнопку Подписаться, я даю 
+                <a href="#">согласие на обработку персональных данных</a></label>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="advantages">
+      </div>
+
+      <section class="delivery">
+        <div class="wrapper">
+          <h3>Когда я получу ноты?</h3>
+          <p>Средний срок изготовления нот - неделя. При необходимости выполнения заказа в более короткие сроки,
+            необходимо сообщить об этом при оформлении заказа. Возможно выполнения заказа за 1-2 дня при дополнительной
+            оплате от 300 руб.
+            <br /> (в зависимости от сложности заказа).</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="footer-top">
+        <div class="wrapper wrapper--flex wrapper--tablet">
+          <div class="footer-top-description">
+            <h2><span>Фоно</span>фактура</h2>
+            <p>Магазин музыкальных инструментов</p>
+            <ul class="advantages-list">
+              <li> Большой выбор музыкальных инструментов</li>
+              <li> Бесплатная доставка в 200 городов России </li>
+              <li> Покупка в рассрочку 0/0/24</li>
+            </ul>
+            <a href="#" class="market-button">Перейти в магазин</a>
+          </div>
+          <div class="footer-top-picture">
+            <img src="./img/footer-background.png" alt="footer-pic">
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-bottom">
+
+        <div class="footer-nav">
+          <div class="wrapper">
+            <nav>
+              <ul class="footer-main-nav">
+                <li><a href="musicians.html">Музыканты</a></li>
+                <li><a href="arrangement.html">Аранжировки</a></li>
+                <li><a href="genre.html">Жанры</a></li>
+                <li><a href="#">Нотные наборы</a></li>
+              </ul>
+            </nav>
+
+            <div class="footer-right-block">
+              <div class="custom-nav">
+                <a href="#" class="note-order-link--footer">Заказать ноты</a>
+                <a href="#" class="market-link--footer">Магазин музыкальных инструментов</a>
+              </div>
+              <ul class="footer-social-link">
+                <li>
+                  <a href="#" class="footer-link-facebook"></a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link-vk"></a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link-twiter"></a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link-youtube"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-copyright wrapper">
+          <h3>Notestore</h3>
+          <p>© 2017 Notestore.com. Все права защищены.</p>
+          <p class="copyright-politics"> Политика в отношении обработки персональных данных</p>
+        </div>
+      </section>
+      <!-- =include ./component/navMenu.html -->
+    </footer>
+  </div>
+
+  <script src="./libs/jqerry.js"></script>
+  <script src="./libs/slick/slick.min.js"></script>
+  <script src="./libs/JQUI/jquery-ui.js"></script>
+  <script src="./libs/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
