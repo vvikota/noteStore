@@ -25,7 +25,7 @@
   .musicset .note-card,
   .musicset .note-card:nth-child(4n){
     margin-right: calc((100% - 585px)/2);
-    margin-bottom: 61px;
+    margin-bottom: 50px;
   }
 
   .musicset .note-card:nth-child(3n){
@@ -55,13 +55,13 @@
   .musicset .note-card{
     flex-direction: row;
     float: inherit;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
     width: auto;
   }
 
   .musicset .note-card:nth-child(4n),
   .musicset .note-card:nth-last-child(-n+4){
-    margin-bottom: 30px;
+    margin-bottom: 27px;
   }
 
   .note-card-text {

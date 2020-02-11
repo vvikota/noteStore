@@ -246,42 +246,58 @@
     </header>
 
     <main>
-      <div class="form-block">
+      <div class="order">
         <div class="wrapper">
           <div class="breadcrumbs">
             <a href="./index.html">Главная</a>
             <span>Заказ нот</span>
           </div>
           <h1>Закажи ноты любимой песни</h1>
-          <div class="form-description">
-            <h4>Создание нот любого произведения под заказ за </h4>
-             <a href="#"> 1 неделю</a>
-             <h5>В комплект входит:</h5>
-             <ul>
-               <li>аккомпанемент песни;</li>
-               <li>аккомпанемент и вокал;</li>
-               <li>ноты в PDF файле</li>
-               <li>пример игры на фортепиано</li>
-               <li>исходный файл для корректировок</li>
-             </ul>
-             <span>Цена:<i>1000 руб.</i></span>
+
+          <div class="order__container">
+            <div class="order__description description">
+            
+               <h4 class="description__title">Создание нот любого произведения под заказ за <span>1 неделю</span></h4>
+             
+              <h5 class="description__list-title">В комплект входит:</h5>
+              <ul class="description__list">
+                <li>аккомпанемент песни;</li>
+                <li>аккомпанемент и вокал;</li>
+                <li>ноты в PDF файле</li>
+                <li>пример игры на фортепиано</li>
+                <li>исходный файл для корректировок</li>
+              </ul>
+              <div class="description__price">Цена:<span>1000 руб.</span></div>
+            </div>
+
+            <div class="order__form">
+              <form>
+                <label for="name">ФИО <span class="necessarily">*</span></label>
+                <input type="text" id="name">
+                <label for="tel">Ваш телефон <span class="necessarily">*</span></label>
+                <input type="text" id="tel">
+                <label for="mail">Ваш E-mail <span class="necessarily">*</span></label>
+                <input type="text" id="mail">
+                <button type="submit">Отправить</button>
+                <label class="order__form-checkbox">
+                  <input type="checkbox">
+                   Нажимая на кнопку Подписаться, я даю
+                  <span>согласие на обработку персональных данных</span>
+                </label>
+              </form>
+            </div>
           </div>
 
-          <div class="form-area">
-            <form action="#">
-              <label for=""><span></span><input type="text"></label>
-              <label for=""><span></span><input type="text"></label>
-              <label for=""><span></span><input type="text"></label>
-              <button type="submit">Отправить</button>
-              <label for=""><input type="checkbox"> Нажимая на кнопку Подписаться, я даю 
-                <a href="#">согласие на обработку персональных данных</a></label>
-            </form>
-          </div>
         </div>
 
       </div>
 
       <div class="advantages">
+        <div class="wrapper">
+          <div class="advantages__item">Все ноты создают профессиональные музыканты</div>
+          <div class="advantages__item">Срок изготовления до 1 недели, но можно и быстрее</div>
+          <div class="advantages__item">Любые произведения и песни</div>
+        </div>
       </div>
 
       <section class="delivery">

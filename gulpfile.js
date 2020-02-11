@@ -46,7 +46,7 @@ gulp.task('style', () => {
     }));
 });
 
-// for finish task
+// for build task
 gulp.task('styleFinish', () => {
   return gulp.src('src/static/styles/style.scss')
     .pipe(sass())
@@ -59,7 +59,7 @@ gulp.task('styleFinish', () => {
     }))
     .pipe(gulp.dest('build/css'))
 });
-// for finish task
+// for build task
 
 
 gulp.task('scripts', () => {
@@ -106,7 +106,7 @@ gulp.task('default', gulp.series(
   gulp.parallel('watch', 'serve')
 ));
 
-gulp.task('finish', gulp.series(
+gulp.task('build', gulp.series(
   'clean',
   gulp.parallel('html', 'styleFinish'),
   'img', 'scripts', 'fonts', 'libs'
