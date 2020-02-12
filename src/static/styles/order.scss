@@ -119,11 +119,21 @@
   }
 
   & input[type=text]{
-    padding: 13px;
+    padding: 11px 13px;
     font-family: Roboto, sans-serif;
     font-size: 15px;
     font-weight: 500;
     color: #5c5c5c;
+    box-sizing: border-box;
+    border: 3px solid #ffffff;
+  }
+
+  & input[type=text]:focus{
+    border: 3px solid #7d7d7d;
+  }
+
+  & input[type=text].incorrect{
+    border: 3px solid #f2547c;
   }
 
   & button{
@@ -138,6 +148,12 @@
     background-color: #e1e1e1;
     border: none;
     border-radius: 2px;
+
+    &.active{
+      background-color: #f2547c;
+      color: #ffffff;
+      cursor: pointer;
+    }
   }
 
   & .order__form-checkbox p{
@@ -292,7 +308,7 @@
     position: relative;
   }
 
-  .order .wrapper:not(.wrapper--breadcrumbs):after{
+  .order .wrapper--order:after{
     position: absolute;
     z-index: 1;
     content: "";
@@ -348,10 +364,128 @@
 }
 
 @media screen and (max-width: 650px){
+
+  .order__description {
+    padding-bottom: 23px;
+  }
+
   .order h1{
     margin-top: 22px;
     margin-bottom: 21px;
     font-size: 26px;
     line-height: 36px;
+  }
+
+  .description__title,
+  .description__price,
+  .delivery h3 {
+    font-size: 21px;
+  }
+
+  .description__title{
+    margin-top: 16px;
+    margin-bottom: 10px;
+  }
+
+  .description__list-title,
+  .description__list li,
+  .delivery p {
+    font-size: 16px;
+  }
+
+  .description__list-title {
+    margin-top: 0;
+  }
+
+  .description__list {
+    margin-bottom: 23px;
+  }
+
+  .advantages__item {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 520px){
+  .wrapper--breadcrumbs {
+    padding-top: 29px;
+    padding-bottom: 26px;
+  }
+
+  .order .wrapper--order:after{
+    display: none;
+  }
+
+  .wrapper--order{
+    padding: 0;
+  }
+
+  .order h1{
+    padding-left: 25px;
+    padding-right: 50px;
+  }
+
+  .order__description{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .order__form{
+    padding: 20px 25px 30px 25px;
+  }
+
+  .order__form .order__form-checkbox p{
+    padding-left: 75px;
+    padding-right: 10px;
+  }
+
+  .order__form .order__form-checkbox p:before{
+    left: 38px;
+  }
+
+  .order__form .order__form-checkbox p:after {
+    left: 41px;
+  }
+
+  .order__form button {
+    margin-bottom: 18px;
+  }
+
+  .advantages__item{
+    margin-left: 0;
+    padding-top: 44px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    line-height: 26px;
+  }
+
+  .advantages__item:after {
+    display: none;
+  }
+
+  .advantages__item:before {
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .advantages__item:last-child:before {
+    top: -25px;
+  }
+
+  .delivery{
+    padding-top: 22px;
+    padding-bottom: 17px;
+  }
+
+  .delivery h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .delivery p {
+    margin-top: 0;
+    line-height: 26px;
   }
 }
