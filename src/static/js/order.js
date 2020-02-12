@@ -12,15 +12,25 @@ submitButton.click(function(event){
   }
 })
 
-$('.order__form-checkbox input').change(function(){
-  if(this.checked) {
-    submitButton.addClass('active');
-  } else {
-    submitButton.removeClass('active');
-  }
-})
+
 
 $('.order__form input').on('input', function(event) {
+  
+  function formValidate(){
+    // console.log($('.incorrect').length)
+    $('.order__form input').each(function(){
+     // var text = $(event.target).text();
+      console.log(this)
+    })
+    // console.log($('.order__form input').val())
+
+    //  if($('.incorrect').length === 0){
+    //   submitButton.addClass('active');
+    //  } else {
+    //   submitButton.removeClass('active');
+    //  }
+  }
+
   
   function validateValue(validateRule){
     var iD = $(event.target).attr('id');
@@ -28,10 +38,11 @@ $('.order__form input').on('input', function(event) {
     if (validateRule){
       $(event.target).removeClass('incorrect');
       $('[for = '+iD+']').removeClass('show-hint');
-      
+      formValidate()
     } else {
       $(event.target).addClass('incorrect');
       $('[for = '+iD+']').addClass('show-hint');
+      formValidate()
     }
   }
 
@@ -50,14 +61,14 @@ $('.order__form input').on('input', function(event) {
     validateRule = $(event.target).val().match(regExp);
 
     validateValue(validateRule);
+  } else if ($('.order__form-checkbox input').is(event.target)){
+    if(this.checked) {
+      $(event.target).removeClass('incorrect');
+    } else {
+      $(event.target).addClass('incorrect');
+    }
   }
 })
 
-function formValidate(){
-  // console.log('start')
-  if($('.order__form-checkbox input').prop('checked')){
-    console.log('chekeder')
-  }
-}
 
-formValidate();
+
