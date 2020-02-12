@@ -1,4 +1,3 @@
-$(document).ready(function() {
 
   //=include headerScript.js
   //=include slider.js
@@ -6,5 +5,3 @@ $(document).ready(function() {
   //=include sliderRange.js
   //=include smoothScroll.js
   //=include order.js
-
-});

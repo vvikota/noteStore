@@ -71,6 +71,7 @@ if($('.sort')){
     else if(chooseButton.is(event.target)){
        $(target).next().toggleClass('show')
     }  
+    
     // popular and new change
     else if($('.sort-rezult-button').is(event.target) 
          && !($('.sort-rezult-list')).hasClass('show')){

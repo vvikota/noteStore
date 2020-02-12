@@ -1,3 +1,4 @@
+// собрать в документ все клики
 
 var submitButton = $('.order__form button');
 
@@ -53,7 +54,7 @@ $('.order__form input').on('input', function(event) {
 })
 
 function formValidate(){
-  console.log('start')
+  // console.log('start')
   if($('.order__form-checkbox input').prop('checked')){
     console.log('chekeder')
   }
