@@ -1,7 +1,7 @@
-if($('#fullArticle')){
+if($('.top-description-text-more')){
   $(document).click(function(event) {
     if($(event.target).is($('.top-description-text-more'))){
-      $('html,body').stop().animate({ scrollTop: $('#fullArticle').offset().top }, 1000);
+      $('html,body').stop().animate({ scrollTop: $('.bottom-page-description').offset().top }, 1000);
       e.preventDefault();
     }
   })
