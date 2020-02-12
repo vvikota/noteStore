@@ -5,5 +5,6 @@ $(document).ready(function() {
   //=include musicians.js
   //=include sliderRange.js
   //=include smoothScroll.js
+  //=include order.js
 
 });

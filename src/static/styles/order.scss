@@ -114,8 +114,26 @@
     color: #ffffff;
   }
 
+  & label:not(.order__form-checkbox){
+    position: relative;
+  }
+
   & .necessarily{
     color: #d05171;
+  }
+
+  &-hint{
+    display: none;
+    position: absolute;
+    top: 43px;
+    right: 14px;
+    font-family: Roboto, sans-serif;
+    font-size: 11px;
+    color: #f2547c;
+  }
+
+  & label.show-hint .order__form-hint{
+    display: block;    
   }
 
   & input[type=text]{
