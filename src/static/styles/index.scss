@@ -239,7 +239,7 @@
   width: 100px;
 }
 
-.music-sets-slider .slick-dots li button{
+.slick-dots li button{
   width: 8px;
   height: 8px;
   padding: 4px;
@@ -247,11 +247,11 @@
   background-color: #dfdfdf;
 }
 
-.music-sets-slider .slick-dots .slick-active button{
+.slick-dots .slick-active button{
   background-color: #9c9c9c;
 }
 
-.music-sets-slider .slick-dots li button:before{
+.slick-dots li button:before{
   content: "";
 }
 

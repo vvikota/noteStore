@@ -25,8 +25,9 @@ $('.order__form input').on('input', function(event) {
     }
     validateForm()
   // tel validate  
-  } else if($('#tel').is(event.target)){
-       console.log($(event.target))
+  } 
+  //else if($('#tel').is(event.target)){
+    //   console.log($(event.target))
     // if((event.target).value.length > 0){
     //   $(event.target).removeClass('incorrect');
     //   $(event.target).removeClass('js-empty');
@@ -37,9 +38,9 @@ $('.order__form input').on('input', function(event) {
     //   $('[for = '+iD+']').addClass('show-hint');
     // }
     // validateForm()
-
+  //} 
   // mail validate  
-  } else if($('#mail').is(event.target)){
+  else if($('#mail').is(event.target)){
     var regExp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
     if((event.target).value.length > 0){
@@ -80,6 +81,8 @@ submitButton.click(function(event){
   }
 })
 
-$('#tel').mask("+7 (999) 999-99-99", 
+if($('#tel').length){
+  $('#tel').mask("+7 (999) 999-99-99", 
   {completed:
     function(){$('#tel').removeClass('js-empty')}})
+}

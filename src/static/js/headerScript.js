@@ -61,7 +61,12 @@ $(document).focusout(function (event) {
 })
 
 $(window).resize(function() {
-  noteSliderSpotter();
+  if ($('.similar__slider').length) {
+     noteSliderSpotter(185);
+  } else if ($('.slick-slider-notes').length){
+    noteSliderSpotter(195);
+  }
+ 
 
   if (window.innerWidth >= 768 && !hiddenSocialMenu.hasClass('hidden-link-open')){
     shadow.removeClass('show-backdrop');
