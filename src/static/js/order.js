@@ -1,74 +1,69 @@
-// собрать в документ все клики
-
-var submitButton = $('.order__form button');
-
-submitButton.click(function(event){
-  event.preventDefault();
-
-  if (submitButton.hasClass('active')){
-    console.log("click");
-  } else {
-    console.log("erorr");
-  }
-})
-
-
 
 $('.order__form input').on('input', function(event) {
-  
-  function formValidate(){
-    // console.log($('.incorrect').length)
-    $('.order__form input').each(function(){
-     // var text = $(event.target).text();
-      console.log(this)
-    })
-    // console.log($('.order__form input').val())
+  var iD = $(event.target).attr('id'); 
 
-    //  if($('.incorrect').length === 0){
-    //   submitButton.addClass('active');
-    //  } else {
-    //   submitButton.removeClass('active');
-    //  }
-  }
-
-  
-  function validateValue(validateRule){
-    var iD = $(event.target).attr('id');
-
-    if (validateRule){
-      $(event.target).removeClass('incorrect');
-      $('[for = '+iD+']').removeClass('show-hint');
-      formValidate()
+  function validateForm() {
+    if(($('.js-empty').length + $('.incorrect').length) > 0){
+      $('.order__form button').removeClass('active');
     } else {
-      $(event.target).addClass('incorrect');
-      $('[for = '+iD+']').addClass('show-hint');
-      formValidate()
+      $('.order__form button').addClass('active');
     }
   }
-
+ 
+  // name validate
   if($('#name').is(event.target)){
-    validateRule = (event.target).value.length > 0;
-    validateValue(validateRule);
-
-  } else if ($('#tel').is(event.target)){
-     
-    // нужна проверка и маска
-    validateRule = (event.target).value.length > 0;
-    validateValue(validateRule);
-
-  } else if ($('#mail').is(event.target)){
-    var regExp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    validateRule = $(event.target).val().match(regExp);
-
-    validateValue(validateRule);
-  } else if ($('.order__form-checkbox input').is(event.target)){
-    if(this.checked) {
+    
+    if((event.target).value.length > 0){
       $(event.target).removeClass('incorrect');
+      $(event.target).removeClass('js-empty');
+      $('[for = '+iD+']').removeClass('show-hint');
     } else {
       $(event.target).addClass('incorrect');
+      $(event.target).addClass('js-empty');
+      $('[for = '+iD+']').addClass('show-hint');
     }
+    validateForm()
+  // tel validate  
+  } else if($('#tel').is(event.target)){
+
+    if((event.target).value.length > 0){
+      $(event.target).removeClass('incorrect');
+      $(event.target).removeClass('js-empty');
+      $('[for = '+iD+']').removeClass('show-hint');
+    } else {
+      $(event.target).addClass('incorrect');
+      $(event.target).addClass('js-empty');
+      $('[for = '+iD+']').addClass('show-hint');
+    }
+    validateForm()
+  // mail validate  
+  } else if($('#mail').is(event.target)){
+    var regExp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    if((event.target).value.length > 0){
+      $(event.target).removeClass('js-empty');
+
+      if($(event.target).val().match(regExp)){
+        $(event.target).removeClass('incorrect');
+        $('[for = '+iD+']').removeClass('show-hint');
+      } else {
+        $(event.target).addClass('js-empty');
+        $('[for = '+iD+']').addClass('show-hint');
+      }
+    } else {
+      $(event.target).addClass('incorrect');
+      $(event.target).addClass('js-empty');
+      $('[for = '+iD+']').addClass('show-hint');
+    }
+    validateForm()
+  // checkbox validate  
+  } else if ($('.order__form-checkbox input').is(event.target)){
+    if($(event.target).prop('checked')){
+      $(event.target).removeClass('js-empty');
+    } else {
+      $(event.target).addClass('js-empty');
+    }
+    validateForm()
   }
+  
 })
-
-
-
