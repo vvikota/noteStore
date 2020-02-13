@@ -1,12 +1,13 @@
+var submitButton = $('.order__form button');
 
 $('.order__form input').on('input', function(event) {
   var iD = $(event.target).attr('id'); 
 
   function validateForm() {
-    if(($('.js-empty').length + $('.incorrect').length) > 0){
-      $('.order__form button').removeClass('active');
+    if(($('.js-empty').length + $('.incorrect').length)){
+      submitButton.removeClass('active');
     } else {
-      $('.order__form button').addClass('active');
+      submitButton.addClass('active');
     }
   }
  
@@ -25,17 +26,18 @@ $('.order__form input').on('input', function(event) {
     validateForm()
   // tel validate  
   } else if($('#tel').is(event.target)){
+       console.log($(event.target))
+    // if((event.target).value.length > 0){
+    //   $(event.target).removeClass('incorrect');
+    //   $(event.target).removeClass('js-empty');
+    //   $('[for = '+iD+']').removeClass('show-hint');
+    // } else {
+    //   $(event.target).addClass('incorrect');
+    //   $(event.target).addClass('js-empty');
+    //   $('[for = '+iD+']').addClass('show-hint');
+    // }
+    // validateForm()
 
-    if((event.target).value.length > 0){
-      $(event.target).removeClass('incorrect');
-      $(event.target).removeClass('js-empty');
-      $('[for = '+iD+']').removeClass('show-hint');
-    } else {
-      $(event.target).addClass('incorrect');
-      $(event.target).addClass('js-empty');
-      $('[for = '+iD+']').addClass('show-hint');
-    }
-    validateForm()
   // mail validate  
   } else if($('#mail').is(event.target)){
     var regExp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -56,6 +58,7 @@ $('.order__form input').on('input', function(event) {
       $('[for = '+iD+']').addClass('show-hint');
     }
     validateForm()
+
   // checkbox validate  
   } else if ($('.order__form-checkbox input').is(event.target)){
     if($(event.target).prop('checked')){
@@ -65,5 +68,18 @@ $('.order__form input').on('input', function(event) {
     }
     validateForm()
   }
-  
 })
+
+submitButton.click(function(event){
+  event.preventDefault();
+
+  if (submitButton.hasClass('active')){
+    $('.order__form-accept').addClass('show')
+  } else {
+    return false
+  }
+})
+
+$('#tel').mask("+7 (999) 999-99-99", 
+  {completed:
+    function(){$('#tel').removeClass('js-empty')}})
