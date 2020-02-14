@@ -10,9 +10,24 @@ function noteSliderSpotter(slideWidth){
   if (window.innerWidth <= 1320 && window.innerWidth >= 1000){ 
     marginSpotter(40, 4, slideWidth)
   } else if (window.innerWidth <= 1000 && window.innerWidth >= 765){
-    marginSpotter(75, 3, slideWidth)
+    if($('.double__slider').length){
+      marginSpotter(40, 3, slideWidth)
+    } else {
+      marginSpotter(75, 3, slideWidth)
+    }
+    
   } else if (window.innerWidth <= 765 && window.innerWidth >= 630){
-    marginSpotter(75,2, slideWidth)
+   // marginSpotter(75,2, slideWidth)
+
+    if($('.double__slider').length){
+      marginSpotter(25, 3, slideWidth)
+    } else {
+      marginSpotter(75, 2, slideWidth)
+    }
+  } else if (window.innerWidth <= 630 && window.innerWidth >= 450){
+    if($('.double__slider').length){
+      marginSpotter(25, 2, slideWidth)
+    }
   }
 }
 
