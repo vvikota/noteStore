@@ -215,18 +215,93 @@
   font-family: Roboto, sans-serif;
 }
 
+.collection-contents__title{
+  margin-top: 44px;
+  margin-bottom: 31px;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #000000;
+}
+
 .table-row--head{
+  padding-bottom: 4px;
   font-size: 14px;
   line-height: 26px;
   color: #707070;
 }
 
+.table-row:not(.table-row--head){
+  padding-top: 30px;
+}
+
 .table-row .table-cell:first-child{
-  width: 50%;
+  width: 51%;
 }
 
 .table-row .table-cell:nth-child(2),
-.table-row .table-cell:nth-child(3),
 .table-row .table-cell:nth-child(4){
   width: 15%;
+}
+
+.table-row .table-cell:nth-child(3){
+  width: 14%;
+}
+
+.table-row .cell{
+  font-size: 16px;
+}
+
+.table-row .cell:nth-child(2){
+  color: #808080;
+  text-decoration: line-through;
+}
+
+.table-row .cell:nth-child(3){
+  color: #f2547c;
+}
+
+.table-row .cell:nth-child(4){
+  font-weight: 500;
+  color: #000000;
+}
+
+.collection-item{
+  display: flex;
+  padding-bottom: 23px;
+}
+
+.collection-item p{
+  margin: 0;
+}
+
+.item-img{
+  height: 83px;
+  margin-right: 20px;
+}
+
+.item-description{
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+}
+
+.item-description-name{
+  font-size: 14px;
+  color: #5897c4;
+}
+
+.item-description-instrument{
+  margin-bottom: 9px;
+  font-size: 14px;
+  color: #6c6c6c;
+}
+
+.item-description-format{
+  font-size: 14px;
+  color: #000000;
+}
+
+.related-collections{
+  background-color: #363636;
 }
