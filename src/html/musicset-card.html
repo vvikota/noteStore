@@ -220,7 +220,7 @@
         </div>
       </section>
 
-      <section class="portal-nav portal-nav--desktop">
+      <section class="portal-nav portal-nav--desktop portal-nav--music-card">
         <div class="nav-wrapper">
 
           <nav>
@@ -247,26 +247,126 @@
 
     <main>
       <div class="wrapper">
-        <div class="breadcrumbs">
+        <div class="breadcrumbs breadcrumbs--music-card">
           <a href="./index.html">Главная</a>
           <a href="./musicset.html">Нотные наборы</a>
           <span>Лучшие джазовые исполнители</span>
         </div>
-        
+
         <h1 class="musicset-card-title">Нотный набор - Лучшие джазовые исполнители</h1>
       </div>
 
-        <div class="collection-description">
-          <div class="wrapper">
-          <img src="./img/musicset_card_main.jpg" alt="pic" class="description__img">
-          <div class="description__text"></div>
-          <div class="description__order"></div>
-        </div>
-        </div>
+      <div class="collection-description">
+        <div class="wrapper">
+          <div>
+            <img src="./img/musicset_card_main.jpg" alt="pic" class="description__img">
+            <div class="description__text">
+              <p class="text-atention"><strong>Внимание!</strong> Указанные скидки действительны только в составе
+                данного сборника.
+              </p>
+              <div class="text-undetail">
+                <p>Артист: Лучшие джазовые исполнители</p>
+                <p>Другие аранжировки:
+                  <a href="#">Пианино и вокал,</a>
+                  <a href="#">Духовые,</a>
+                  <a href="#">Гитара,</a>
+                  <a href="#">Еще</a>
+                </p>
+                <p>Жанр:
+                  <a href="#">Джаз,</a>
+                  <a href="#">Блюз</a>
+                </p>
+                <p>Форматы: .pdf, .midi, .finale (ред)
+                </p>
+              </div>
+              <div class="text-about">
+                Физическая основа музыкального инструмента, производящего музыкальные звуки (за исключением
+                электрических устройств), это резонатор. Это может быть струна, столб воздуха в некотором объёме,
+                колебательный контур, или иной объект, способный запасать подведённую энергию в виде колебаний.
+              </div>
+            </div>
+            <div class="description__order">
+              <h2 class="order-title">Доступные форматы</h2>
+              <p class="order-explanation">Ноты высылаются на e-mail указанный Вами при оформлении заказ.</p>
+              <form action="#" class="order-form">
+                <div class="radio-group">
 
-        <div class="collection-contents"></div>
+                  <div class="input-item">
+                    <div class="input-area">
+                      <input type="radio" id="pdf" name="format" value="pdf">
+                      <label for="pdf">.pdf</label>
+                    </div>
+                    <div class="input-prices">
+                      <span class="input-old-price">320 р.</span>
+                      <span class="input-new-price">250 р.</span>
+                    </div>
+                  </div>
 
-      
+                  <div class="input-item">
+                    <div class="input-area">
+                      <input type="radio" id="midi" name="format" value="midi">
+                      <label for="midi">.pdf, .midi</label>
+                    </div>
+                    <div class="input-prices">
+                      <span class="input-old-price">562 р.</span>
+                      <span class="input-new-price">430 р.</span>
+                    </div>
+                  </div>
+
+                  <div class="input-item">
+                    <div class="input-area">
+                      <input type="radio" id="all-format" name="format" value="all-format">
+                      <label for="all-format">.pdf, .midi, .finale(ред.)</label>
+                    </div>
+                    <div class="input-prices">
+                      <span class="input-old-price">806 р.</span>
+                      <span class="input-new-price">703 р.</span>
+                    </div>
+                  </div>
+
+                </div>
+                <button type="submit" class="order-form-button">Добавить в корзину</button>
+                <span class="order-form-profit">Ваша выгода: 103 р.</span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collection-contents wrapper">
+        <h2 class="collection-contents__title">Содержание сборника</h2>
+        <div class="collection-contents__table">
+           
+          <div class="table-row table-row--head">
+            <div class="table-cell">Товар</div>
+            <div class="table-cell">Цена без скидки</div>
+            <div class="table-cell">Скидка</div>
+            <div class="table-cell">Цена со скидкой</div>
+          </div>
+
+          <div class="table-row">
+            <div class="table-cell">item-card</div>
+            <div class="table-cell">356</div>
+            <div class="table-cell">10%</div>
+            <div class="table-cell">321</div>
+          </div>
+
+          <div class="table-row">
+            <div class="table-cell">item-card</div>
+            <div class="table-cell">356</div>
+            <div class="table-cell">10%</div>
+            <div class="table-cell">321</div>
+          </div>
+
+          <div class="table-row">
+            <div class="table-cell">item-card</div>
+            <div class="table-cell">356</div>
+            <div class="table-cell">10%</div>
+            <div class="table-cell">321</div>
+          </div>
+
+        </div>
+      </div>
 
     </main>
 
