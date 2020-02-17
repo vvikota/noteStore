@@ -1,5 +1,13 @@
+.portal-nav--desktop-artist{
+  border-bottom: 1px solid #ebebeb;
+}
+
+.breadcrumbs--artist{ 
+  padding-top: 29px;
+}
+
 .artist-card{
-  padding-top: 25px;
+  padding-top: 3px;
   font-family: Roboto, sans-serif;
 
   &__title{
@@ -32,6 +40,7 @@
     }
 
     & span{
+      font-weight: 400;
       color: #000000;
     }
 
@@ -52,6 +61,7 @@
 }
 
 .note__title{
+  padding-top: 9px;
   font-size: 21px;
   font-weight: 400;
   line-height: 28px;
@@ -224,7 +234,16 @@
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
+  .header--artist{
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .wrapper--artist{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
   .artist-card{
 
     &__content{
@@ -237,8 +256,7 @@
     }
 
     &__text{
-      padding-top: 14px;
-      padding-bottom: 26px;
+      padding: 14px 89px 26px 60px;
     }
 
     &__text p{
@@ -257,7 +275,7 @@
       display: block;
       top: 81px;
       right: 79px;
-      padding-right: 95px;
+      padding-right: 151px;
       border: none;
       background-color: #f6f6f6;
       font-family: Roboto,sans-serif;
@@ -283,12 +301,18 @@
     width: 192px;
   }
 
+  .artist-note.wrapper,
+  .wrapper--similar{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
   .double__slider{
     margin-top: 30px;
   }
 
   .double__slide .rezult-item:first-child{
-    margin-bottom: 20px;
+    margin-bottom: 33px;
   }
 
   .artist-card.wrapper{
@@ -297,13 +321,34 @@
   }
 
   .artist-card__title{
-    padding-left: 40px;
+    padding-left: 25px;
+  }
+
+  .product-instrument {
+    margin-bottom: 9px;
+  }
+
+  .double__slide .rezult-item {
+    min-height: 272px;
+  }
+
+  .double__slide .product-price{
+    margin-top: 9px;
+    margin-bottom: 0;
   }
 
   .similar__title {
     font-family: RobotoSlab;
   }
 }
+
+@media screen and (max-width: 765px){
+  .artist-note.wrapper,
+  .wrapper--similar{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+} 
 
 @media screen and (max-width: 510px) {
   
@@ -317,12 +362,12 @@
  
   .artist-card {
 
-    &__title{
-      margin-top: 0;
-    }
-
     &__img img{
       width: 274px;
+    }
+
+    &__text{
+      padding-top: 3px;
     }
 
     &__text p{
@@ -342,13 +387,8 @@
     }
   } 
 
-  body .wrapper .double__slider {
-    overflow: hidden;
-    max-height: 735px;
-  }
-
-  body .wrapper .double__slider.see-all-notes{
-    max-height: initial;
+  .double__slide:nth-child(n+4){
+    display: none;
   }
 
   .artist-card__text{
@@ -359,7 +399,7 @@
   }
 
   .artist-card__text-button {
-    top: 209px;
+    top: 199px;
     left: -6px;
     right: auto;
     padding-right: 0;
@@ -376,6 +416,10 @@
   .double__slider .rezult-img-wrapper img {
     width: 102px;
     height: auto;
+  }
+
+  .double__slide{
+    margin-right: 0;
   }
 
   .double__slide .rezult-item,
@@ -405,7 +449,31 @@
     line-height: 28px;
     color: #363636;
     border: none;
-    background: #d9d9d9 url('../img/see-more-button.png') 68% 55% no-repeat;
+    background: #d9d9d9;
+  }
+
+  .button-more:after{
+    position: absolute;
+    content: "";
+    top: 47%;
+    left: 64%;
+    width: 15px;
+    height: 10px;
+    background: #d9d9d9 url('../img/see-more-button.png') no-repeat;
+  }
+
+  .button-more.detailed:after{
+    top: 38%;
+    left: 58%;
+    transform: rotate(180deg);
+  }
+  
+  .artist-note {
+    padding-bottom: 7px;
+  }
+
+  .similar .wrapper {
+    padding-top: 17px;
   }
 
   .similar__title {

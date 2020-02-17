@@ -39,20 +39,24 @@ $(document).ready(function() {
       event.preventDefault();
       if(text.hasClass('open-full-text')){
         text.removeClass('open-full-text');
-        button.text('Раскрыть')
+        button.text('Раскрыть');
       } else {
         text.addClass('open-full-text');
-        button.text('Свернуть')
+        button.text('Свернуть');
       }
 
     } else if (noteButton.is(event.target)){
       event.preventDefault();
       if(noteContainer.hasClass('see-all-notes')){
-        noteContainer.removeClass('see-all-notes');
-        noteButton.text('Показать еще')
+         noteContainer.removeClass('see-all-notes');
+         noteButton.text('Показать еще');
+         noteButton.removeClass('detailed');
+        $('.double__slide:nth-child(n+4)').hide(1000);
       } else {
         noteContainer.addClass('see-all-notes');
-        noteButton.text('Свернуть')
+        noteButton.text('Свернуть');
+        noteButton.addClass('detailed');
+        $('.double__slide:nth-child(n+4)').show(1000);
       }
     }
   })

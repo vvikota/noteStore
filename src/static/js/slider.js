@@ -11,7 +11,7 @@ function noteSliderSpotter(slideWidth){
     marginSpotter(40, 4, slideWidth)
   } else if (window.innerWidth <= 1000 && window.innerWidth >= 765){
     if($('.double__slider').length){
-      marginSpotter(40, 3, slideWidth)
+      marginSpotter(60, 3, slideWidth)
     } else {
       marginSpotter(75, 3, slideWidth)
     }
