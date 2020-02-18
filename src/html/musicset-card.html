@@ -315,7 +315,7 @@
 
                   <div class="input-item">
                     <div class="input-area">
-                      <input type="radio" id="all-format" name="format" value="all-format">
+                      <input type="radio" id="all-format" name="format" value="all-format" checked>
                       <label for="all-format">.pdf, .midi, .finale(ред.)</label>
                     </div>
                     <div class="input-prices">
@@ -347,9 +347,9 @@
           <div class="table-row">
             <div class="table-cell cell">
               <div class="collection-item">
-                <img src="./img/musicset-card1.jpg" alt="pic" class="item-img">
+                <a href="#"><img src="./img/musicset-card1.jpg" alt="pic" class="item-img"></a>
                 <div class="item-description">
-                  <p class="item-description-name">Ella Fitzgerald, Frank Devol Orchestra Rudolph The Red - Nosed Reindeer, 1961</p>
+                  <a  href="#" class="item-description-name">Ella Fitzgerald, Frank Devol Orchestra Rudolph The Red - Nosed Reindeer, 1961</a>
                   <span class="item-description-instrument">Вокал и пианино</span>
                   <span class="item-description-format">.pdf, .midi, .finale (ред.)</span>
                 </div>
@@ -363,9 +363,9 @@
           <div class="table-row">
             <div class="table-cell cell">
               <div class="collection-item">
-                <img src="./img/musicset-card2.jpg" alt="pic" class="item-img">
+                <a href="#">  <img src="./img/musicset-card2.jpg" alt="pic" class="item-img"></a>
                 <div class="item-description">
-                  <p class="item-description-name">Nat "King" Cole - Deck the HallRemastered, 1954</p>
+                  <a href="#" class="item-description-name">Nat "King" Cole - Deck the HallRemastered, 1954</a>
                   <span class="item-description-instrument">Вокал и пианино</span>
                   <span class="item-description-format">.pdf, .midi, .finale (ред.)</span>
                 </div>
@@ -379,10 +379,9 @@
           <div class="table-row">
             <div class="table-cell cell">
               <div class="collection-item">
-                <img src="./img/musicset-card3.jpg" alt="pic" class="item-img">
+                <a href="#">  <img src="./img/musicset-card3.jpg" alt="pic" class="item-img"></a>
                 <div class="item-description">
-                  <p class="item-description-name">Brigitte Zarie - Good to Be 
-                    Home, 2003</p>
+                  <a href="#" class="item-description-name">Brigitte Zarie - Good to Be Home, 2003</a>
                   <span class="item-description-instrument">Вокал и пианино</span>
                   <span class="item-description-format">.pdf, .midi, .finale (ред.)</span>
                 </div>
@@ -400,26 +399,105 @@
         <div class="wrapper">
           <h3>Похожие сборники</h3>
           <div class="related-slider">
-            <div class="slider-item">
-              <img src="./img/related-slider1.jpg" alt="pic">
-              <span>10 лучших нот для саксофона</span>
+
+            <div class="slider-item js-note-card">
+              <a>
+                <img src="./img/related-slider1.jpg" alt="pic">
+              </a>
+              <a class="related-text">10 лучших нот для саксофона</a>
             </div>
-            <div class="slider-item">
-              <img src="./img/related-slider2.jpg" alt="pic">
-              <span>10 лучших нот для джазового вокала</span>
+
+            <div class="slider-item js-note-card">
+              <a>
+                <img src="./img/related-slider2.jpg" alt="pic">
+              </a>
+              <a class="related-text">10 лучших нот для джазового вокала</a>
             </div>
-            <div class="slider-item">
-              <img src="./img/related-slider3.jpg" alt="pic">
-              <span>Ноты для джаз-гитары</span>
+
+            <div class="slider-item js-note-card">
+              <a>
+                <img src="./img/related-slider3.jpg" alt="pic">
+              </a>
+              <a class="related-text">Ноты для джаз-гитары</a>
             </div>
-            <div class="slider-item">
-              <img src="./img/related-slider4.jpg" alt="pic">
-              <span>Ноты для госпел</span>
+
+            <div class="slider-item js-note-card">
+              <a>
+                <img src="./img/related-slider4.jpg" alt="pic">
+              </a>
+              <a class="related-text">Ноты для госпел</a>
             </div>
-            <div class="slider-item">
-              <img src="./img/related-slider2.jpg" alt="pic">
-              <span>Ноты для виолончели</span>
+
+            <div class="slider-item js-note-card">
+              <a>
+                <img src="./img/related-slider2.jpg" alt="pic">
+              </a>
+              <a class="related-text">Ноты для виолончели</a>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="recently-watched">
+        <div class="wrapper">
+          <h3>Недавно просмотренные</h3>
+          <div class="recently-slider">
+
+            <div class="recently-item">
+              <a href="#" class="recently-img-wrapper"><img src="./img/alekseev1.jpg" alt="img"></a>
+              <div class="recently-description">
+                <a href="#" class="product-name">
+                  Alekseev - Пьяное солнце, 2017
+                </a>
+                <p class="product-instrument">Вокал и пианино</p>
+                <p class="product-price">356 руб.</p>
+              </div>
+            </div>
+
+            <div class="recently-item">
+              <a href="#" class="recently-img-wrapper"><img src="./img/alekseev2.jpg" alt="img"></a>
+              <div class="recently-description">
+                <a href="#" class="product-name">
+                  Alekseev - Навсегда, 2017
+                </a>
+                <p class="product-instrument">Вокал и пианино</p>
+                <p class="product-price free">Бесплатно</p>
+              </div>
+            </div>
+
+            <div class="recently-item">
+              <a href="#" class="recently-img-wrapper"><img src="./img/alekseev3.jpg" alt="img"></a>
+              <div class="recently-description">
+                <a href="#" class="product-name">
+                  Alekseev - Чуствую душой, 2017
+                </a>
+                <p class="product-instrument">Вокал и пианино</p>
+                <p class="product-price">128 руб.</p>
+              </div>
+            </div>
+
+            <div class="recently-item">
+              <a href="#" class="recently-img-wrapper"><img src="./img/alekseev4.jpg" alt="img"></a>
+              <div class="recently-description">
+                <a href="#" class="product-name">
+                  Alekseev - Дежржи, 2017
+                </a>
+                <p class="product-instrument">Вокал и пианино</p>
+                <p class="product-price free">Бесплатно</p>
+              </div>
+            </div>
+
+            <div class="recently-item">
+              <a href="#" class="recently-img-wrapper"><img src="./img/alekseev2.jpg" alt="img"></a>
+              <div class="recently-description">
+                <a href="#" class="product-name">
+                  Alekseev - Чуствую душой, 2017
+                </a>
+                <p class="product-instrument">Вокал и пианино</p>
+                <p class="product-price">128 руб.</p>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>

@@ -6,3 +6,4 @@
   //=include smoothScroll.js
   //=include order.js
   //=include artist.js
+  //=include musicset-card.js
