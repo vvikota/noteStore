@@ -9,8 +9,8 @@ $(document).ready(function() {
       infinite: true,
       variableWidth: true
     });
+    noteSliderSpotter(185);
    
-
   } if(recentlySlider.length) {
     recentlySlider.slick({
         dots: true,
@@ -18,6 +18,6 @@ $(document).ready(function() {
         infinite: true,
         variableWidth: true
       });
-      
+      noteSliderSpotter(185);
     }
 })

@@ -1,8 +1,10 @@
 var mainSlider = $('.main-slider');
 var notesSlider = $('.slick-slider-notes');
 
-function marginSpotter(sliderMargin, slidesAmount, slideWidth) {   
-  var marginR = Math.round((window.innerWidth - sliderMargin*2 - slideWidth*slidesAmount - 20)/(slidesAmount-1) )   
+function marginSpotter(sliderMargin, slidesAmount, slideWidth) {  
+  var scrollWidth;
+  (window.innerWidth > 900) ? scrollWidth = 20 : scrollWidth = 0; 
+  var marginR = Math.round((window.innerWidth - sliderMargin*2 - slideWidth*slidesAmount - scrollWidth)/(slidesAmount-1) )   
   $('.js-note-card').css("marginRight", marginR + 'px');
 }
 
@@ -10,7 +12,7 @@ function noteSliderSpotter(slideWidth){
   if (window.innerWidth <= 1320 && window.innerWidth >= 1000){ 
     marginSpotter(40, 4, slideWidth)
   } else if (window.innerWidth <= 1000 && window.innerWidth >= 765){
-    if($('.double__slider').length){
+    if($('.double__slider').length || $('.related-slider').length || $('.recently-slider').length){
       marginSpotter(60, 3, slideWidth)
     } else {
       marginSpotter(75, 3, slideWidth)

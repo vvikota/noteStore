@@ -258,15 +258,17 @@
 
       <div class="collection-description">
         <div class="wrapper">
-          <div>
-            <img src="./img/musicset_card_main.jpg" alt="pic" class="description__img">
+          <div class="collection-description-content">
+            <div class="description__img-wrapper">
+              <img src="./img/musicset_card_main.jpg" alt="pic" class="description__img">
+            </div>
             <div class="description__text">
               <p class="text-atention"><strong>Внимание!</strong> Указанные скидки действительны только в составе
                 данного сборника.
               </p>
               <div class="text-undetail">
                 <p>Артист: Лучшие джазовые исполнители</p>
-                <p>Другие аранжировки:
+                <p class="text-undetail__instruments">Другие аранжировки:
                   <a href="#">Пианино и вокал,</a>
                   <a href="#">Духовые,</a>
                   <a href="#">Гитара,</a>
@@ -336,12 +338,14 @@
       <div class="collection-contents wrapper">
         <h2 class="collection-contents__title">Содержание сборника</h2>
         <div class="collection-contents__table">
-           
+
           <div class="table-row table-row--head">
             <div class="table-cell h-cell">Товар</div>
-            <div class="table-cell h-cell">Цена без скидки</div>
-            <div class="table-cell h-cell">Скидка</div>
-            <div class="table-cell h-cell">Цена со скидкой</div>
+            <div class="table-sub-row">
+              <div class="table-cell h-cell">Цена без скидки</div>
+              <div class="table-cell h-cell">Скидка</div>
+              <div class="table-cell h-cell">Цена со скидкой</div>
+            </div>
           </div>
 
           <div class="table-row">
@@ -349,21 +353,24 @@
               <div class="collection-item">
                 <a href="#"><img src="./img/musicset-card1.jpg" alt="pic" class="item-img"></a>
                 <div class="item-description">
-                  <a  href="#" class="item-description-name">Ella Fitzgerald, Frank Devol Orchestra Rudolph The Red - Nosed Reindeer, 1961</a>
+                  <a href="#" class="item-description-name">Ella Fitzgerald, Frank Devol Orchestra Rudolph The Red -
+                    Nosed Reindeer, 1961</a>
                   <span class="item-description-instrument">Вокал и пианино</span>
                   <span class="item-description-format">.pdf, .midi, .finale (ред.)</span>
                 </div>
               </div>
             </div>
-            <div class="table-cell cell">356 р.</div>
-            <div class="table-cell cell">10 %</div>
-            <div class="table-cell cell">321 р.</div>
+            <div class="table-sub-row">
+              <div class="table-cell cell"><span>Цена без скидки:</span> <div>356 р.</div></div>
+              <div class="table-cell cell"><span>Скидка:</span> 10 %</div>
+              <div class="table-cell cell"><span>Цена со скидкой:</span> 321 р.</div>
+            </div>
           </div>
 
           <div class="table-row">
             <div class="table-cell cell">
               <div class="collection-item">
-                <a href="#">  <img src="./img/musicset-card2.jpg" alt="pic" class="item-img"></a>
+                <a href="#"> <img src="./img/musicset-card2.jpg" alt="pic" class="item-img"></a>
                 <div class="item-description">
                   <a href="#" class="item-description-name">Nat "King" Cole - Deck the HallRemastered, 1954</a>
                   <span class="item-description-instrument">Вокал и пианино</span>
@@ -371,15 +378,17 @@
                 </div>
               </div>
             </div>
-            <div class="table-cell cell">200 р.</div>
-            <div class="table-cell cell">10 %</div>
-            <div class="table-cell cell">180 р.</div>
+            <div class="table-sub-row">
+              <div class="table-cell cell"> <span>Цена без скидки:</span> <div>200 р.</div></div>
+              <div class="table-cell cell"><span>Скидка:</span> 10 %</div>
+              <div class="table-cell cell"><span>Цена со скидкой:</span> 180 р.</div>
+            </div>
           </div>
 
           <div class="table-row">
             <div class="table-cell cell">
               <div class="collection-item">
-                <a href="#">  <img src="./img/musicset-card3.jpg" alt="pic" class="item-img"></a>
+                <a href="#"> <img src="./img/musicset-card3.jpg" alt="pic" class="item-img"></a>
                 <div class="item-description">
                   <a href="#" class="item-description-name">Brigitte Zarie - Good to Be Home, 2003</a>
                   <span class="item-description-instrument">Вокал и пианино</span>
@@ -387,11 +396,12 @@
                 </div>
               </div>
             </div>
-            <div class="table-cell cell">250 р.</div>
-            <div class="table-cell cell">10 %</div>
-            <div class="table-cell cell">175 р.</div>
+            <div class="table-sub-row">
+              <div class="table-cell cell"><span>Цена без скидки:</span> <div>250 р.</div></div>
+              <div class="table-cell cell"><span>Скидка:</span> 10 %</div>
+              <div class="table-cell cell"><span>Цена со скидкой:</span> 175 р.</div>
+            </div>
           </div>
-
         </div>
       </div>
 
@@ -443,7 +453,7 @@
           <h3>Недавно просмотренные</h3>
           <div class="recently-slider">
 
-            <div class="recently-item">
+            <div class="recently-item js-note-card">
               <a href="#" class="recently-img-wrapper"><img src="./img/alekseev1.jpg" alt="img"></a>
               <div class="recently-description">
                 <a href="#" class="product-name">
@@ -454,7 +464,7 @@
               </div>
             </div>
 
-            <div class="recently-item">
+            <div class="recently-item js-note-card">
               <a href="#" class="recently-img-wrapper"><img src="./img/alekseev2.jpg" alt="img"></a>
               <div class="recently-description">
                 <a href="#" class="product-name">
@@ -465,7 +475,7 @@
               </div>
             </div>
 
-            <div class="recently-item">
+            <div class="recently-item js-note-card">
               <a href="#" class="recently-img-wrapper"><img src="./img/alekseev3.jpg" alt="img"></a>
               <div class="recently-description">
                 <a href="#" class="product-name">
@@ -476,7 +486,7 @@
               </div>
             </div>
 
-            <div class="recently-item">
+            <div class="recently-item js-note-card">
               <a href="#" class="recently-img-wrapper"><img src="./img/alekseev4.jpg" alt="img"></a>
               <div class="recently-description">
                 <a href="#" class="product-name">
@@ -487,7 +497,7 @@
               </div>
             </div>
 
-            <div class="recently-item">
+            <div class="recently-item js-note-card">
               <a href="#" class="recently-img-wrapper"><img src="./img/alekseev2.jpg" alt="img"></a>
               <div class="recently-description">
                 <a href="#" class="product-name">
@@ -497,7 +507,7 @@
                 <p class="product-price">128 руб.</p>
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -509,7 +519,7 @@
         <div class="wrapper wrapper--flex wrapper--tablet">
           <div class="footer-top-description">
             <h2><span>Фоно</span>фактура</h2>
-            <p>Магазин музыкальных инструментов</p>
+            <p class="footer-top__title-caption">Магазин музыкальных инструментов</p>
             <ul class="advantages-list">
               <li> Большой выбор музыкальных инструментов</li>
               <li> Бесплатная доставка в 200 городов России </li>

@@ -64,7 +64,7 @@ $(document).ready(function () {
   })
 
   $(window).resize(function () {
-    if ($('.similar__slider').length) {
+    if ($('.similar__slider').length || $('.related-slider').length || $('.recently-slider').length) {
       noteSliderSpotter(185);
     } else if ($('.slick-slider-notes').length) {
       noteSliderSpotter(195);
