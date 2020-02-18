@@ -414,3 +414,14 @@
   }
 
 }
+
+@media screen and (max-width: 420px) {
+  .footer-top-description {
+    padding-right: 0;
+  }
+
+  .footer-top .wrapper--tablet{
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
