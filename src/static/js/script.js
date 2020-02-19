@@ -7,3 +7,4 @@
   //=include order.js
   //=include artist.js
   //=include musicset-card.js
+  //=include product-card.js

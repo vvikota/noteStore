@@ -1,0 +1,59 @@
+.video{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f6f6f6;
+}
+
+.video .wrapper{
+  padding-left: 170px;
+  padding-right: 170px;
+}
+
+.video .video-container{
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+.video iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lyrics{
+  font-family: Roboto,sans-serif;
+  text-align: center;
+}
+
+.lyrics h3{
+  font-size: 21px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.lyrics pre{ 
+  font-family: Roboto,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5d5d5d;
+  text-align: center;
+}
+
+.recently-watched--product-card{
+  padding-bottom: 45px;
+}
+
+.description__play{
+  display: flex;
+  flex-direction: column;
+}
+
+.play-text{
+  display: flex;
+  flex-direction: column;
+}
