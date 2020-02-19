@@ -348,18 +348,22 @@
     left: 97px;
   }
   
-  .slick-slider-notes{
-    padding-left: 15px;
-    padding-right: 15px;
+  // .slick-slider-notes{
+  //   padding-left: 15px;
+  //   padding-right: 15px;
+  // }
+
+  .music-sets-slider h2{
+    margin-left: -15px;
   }
 
   .music-sets-slider .slick-next{
-    right: -33px;
+    right: -48px;
     top: 99px;
   }
 
   .music-sets-slider .slick-prev {
-    left: -38px;
+    left: -53px;
     top: 99px;
   }
 
@@ -370,8 +374,8 @@
 
   .music-sets-slider {
     padding-bottom: 22px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 75px;
+    padding-right: 75px;
   }
 }
 

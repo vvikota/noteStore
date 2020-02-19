@@ -16,13 +16,13 @@ $(document).ready(function() {
       dots: true,
       slidesToScroll: 1,
       infinite: true,
-      variableWidth: true,
-      responsive: [
-        {
-          breakpoint: 450,
-          settings: "unslick"
-        }
-      ]
+      variableWidth: true
+      // responsive: [
+      //   {
+      //     breakpoint: 450,
+      //     settings: "unslick"
+      //   }
+      // ]
     });
     $('.double__slider').addClass('ready-slider');
     noteSliderSpotter(185);
