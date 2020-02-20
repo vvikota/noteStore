@@ -156,13 +156,14 @@
   border: 2px solid #acacac;
   border-radius: 50%;
   background: #ffffff;
+  box-sizing: border-box;
 }
 
 .input-item input+label:after {
   content: '';
   position: absolute;
-  top: 4px;
-  left: 7px;
+  top: 2px;
+  left: 5px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -377,7 +378,7 @@
 
 .recently-watched {
   padding-top: 23px;
-  padding-bottom: 115px;
+  padding-bottom: 127px;
   font-family: Roboto, sans-serif;
 }
 
@@ -439,6 +440,14 @@
 .recently-slider .slick-dots {
   left: -9px;
   width: 100px;
+}
+
+.related-slider .slick-dots{
+  bottom: -24px;
+}
+
+.recently-slider .slick-dots {
+  bottom: -36px;
 }
 
 .related-slider .slick-dots li,
@@ -607,10 +616,15 @@
 
   .collection-contents__title {
     margin-top: 25px;
+    margin-bottom: 29px;
   }
 
   .recently-watched {
     padding-bottom: 68px;
+  }
+
+  .recently-watched h3 {
+    margin-top: 15px;
   }
 
   .recently-watched .slick-dots {
@@ -720,7 +734,7 @@
   }
 
   .related-slider .slick-prev{
-    left: -40px;
+    left: -36px;
   }
 
   .recently-slider .slick-prev {
@@ -728,7 +742,7 @@
   }
 
   .related-slider .slick-next {
-    right: -40px;
+    right: -36px;
   }
 
   .recently-slider .slick-next {
