@@ -258,9 +258,9 @@
 
       <div class="collection-description">
         <div class="wrapper">
-          <div class="collection-description-content">
-            <div class="description__img-wrapper">
-              <img src="./img/note-product-card.jpg" alt="pic" class="description__img">
+          <div class="collection-description-content description-content--product">
+            <div class="description__img-wrapper img-wrapper--product">
+              <img src="./img/product-card-note.jpg" alt="pic" class="description__img">
             </div>
             <div class="description__play">
               <div class="play-text">
@@ -278,7 +278,18 @@
                 <button>Текст песни</button>
                 <button>Видео</button>
               </div>
-              <div class="play-player"></div>
+              <div class="player">
+                <audio src="./audio/europe.mp3" class="track"></audio>     
+                <div class="player__controls">
+                  <div class="player__button toggle-play"></div>
+                  <div class="progress">
+                    <span class="progress__time time-accum">00:12</span>
+                    <div class="progress__filled"></div>
+                    <span class="progress__time time-residue">03:13</span>
+                  </div>
+                  <div class="player__button toggle-volume"></div>
+                </div>            
+              </div>
 
             </div>
             <div class="description__order">

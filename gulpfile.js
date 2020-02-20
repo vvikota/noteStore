@@ -77,6 +77,11 @@ gulp.task('libs', () => {
     .pipe(gulp.dest('./build/libs'))
 })
 
+gulp.task('audio', () => {
+  return gulp.src('src/static/audio/*')
+    .pipe(gulp.dest('./build/audio'))
+})
+
 gulp.task('fonts', () => {
   return gulp.src('src/static/fonts/*')
      .pipe(gulp.dest('./build/fonts'))
@@ -102,12 +107,12 @@ gulp.task('watch', () => {
 gulp.task('default', gulp.series(
   'clean',
   gulp.parallel('html', 'style'),
-  'img', 'scripts', 'fonts', 'libs',
+  'img', 'scripts', 'fonts', 'libs', 'audio',
   gulp.parallel('watch', 'serve')
 ));
 
 gulp.task('build', gulp.series(
   'clean',
   gulp.parallel('html', 'styleFinish'),
-  'img', 'scripts', 'fonts', 'libs'
+  'img', 'scripts', 'fonts', 'libs', 'audio'
 ));
