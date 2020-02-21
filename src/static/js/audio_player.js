@@ -2,7 +2,6 @@ var playButton = $('.toggle-play');
 var track = $('.track')[0];
 var accumTime = $('.time-accum');
 var residueTime = $('.time-residue');
-var currentTime = track.currentTime;
 var duration = track.duration;
 
 track.onloadedmetadata = function () {
@@ -10,11 +9,19 @@ track.onloadedmetadata = function () {
   duration = Math.round(track.duration);
 
   function showTimer() {
-    currentTime = Math.round(track.currentTime);
-    accumTime.text(currentTime);
-    
-    residueTime.text(duration - currentTime);
+
+    function transformTime(time, timePlace) {
+      var transformedTime = Math.floor(time/60) + ':' + (time % 60);
+      timePlace.text(transformedTime)
+    }
+
+    var currentTime = Math.round(track.currentTime);
+    transformTime(currentTime, accumTime);
+
+    var durationTrack = duration - currentTime;
+    transformTime(durationTrack, residueTime);
   }
+
   var autoPlay = setInterval(showTimer, 1000);
   clearInterval(autoPlay);
 
