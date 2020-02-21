@@ -56,11 +56,9 @@ track.onloadedmetadata = function () {
       if(toggleVolume.hasClass('volume-off')){
         toggleVolume.removeClass('volume-off');
         track.volume = 1;
-        console.log(track.volume);
       } else {
         toggleVolume.addClass('volume-off');
         track.volume = 0;
-        console.log(track.volume);
       }
     }
   })

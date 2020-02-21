@@ -1,31 +1,19 @@
 
 .img-wrapper--product{
   position: relative;
-  padding: 35px 52px;
+  padding: 31px 33px;
   border-right: 1px solid #ebebeb;
 }
 
 .img-wrapper--product img{
-  width: 220px;
-  height: 310px;
-}
-
-.img-wrapper--product:before{
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #ffffff;
-  opacity: 0;
-  visibility: hidden;
+  width: 255px;
+  height: 317px;
 }
 
 .description__play{
   display: flex;
   flex-direction: column;
-  padding: 43px 85px;
+  padding: 43px 56px;
 }
 
 .description__play a{
@@ -176,12 +164,17 @@
 }
 // end PLAYER
 
+.collection-description--product .description__order{
+  border-left: 1px solid #ebebeb;
+}
+
 .link-to-basket{
   background-color: transparent;
   color: #5c5c5c;
 }
 
 .video{
+  margin-bottom: 45px;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #f6f6f6;
@@ -228,7 +221,7 @@
 }
 
 .recently-watched--product-card{
-  padding-bottom: 45px;
+  padding-bottom: 59px;
 }
 
 @media screen and (max-width: 1205px){
@@ -241,17 +234,12 @@
     border: none;
   }
   
-  .img-wrapper--product:before {
-    right: 50%;
-    transform: translateX(50%);
-  }
 }
 
 @media screen and (max-width: 900px){
   .description__play {
     width: 345px;
-    padding-right: 0;
-    padding-left: 0;
+    padding: 24px 0 28px 0;
   }
 
   .description__play .play-text {
@@ -271,10 +259,107 @@
 
   .img-wrapper--product {
     padding: 0;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .player {
+    padding-top: 0;
   }
 
   .play-link{
     text-align: center;
   }
 
+  .collection-description--product .description__order {
+    border-top: 1px solid #ebebeb;
+    border-left: none;
+  }
+
+  .main--product-card .input-item{
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  .main--product-card .order-form{
+    margin-top: -5px;
+  }
+
+  .main--product-card .radio-group{
+    margin-bottom: 6px;
+  }
+
+  .main--product-card .description__order {
+    padding-bottom: 15px;
+  }
+
+  .main--product-card .sort-rezult-button {
+    display: none;
+  }
+
+  .recently-watched--product-card {
+    padding-bottom: 47px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .main--product-card .breadcrumbs--music-card span {
+    display: inline; 
+  }
+
+  .main--product-card h1{
+    padding-right: 35px;
+  }
+  
+  .main--product-card .player__controls {
+    width: 275px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .main--product-card .progress{
+    width: 195px;
+  }
+
+  .main--product-card .lyrics pre {
+    white-space: pre-wrap;
+  }
+
+  .description-content--product {
+    align-items: flex-start;
+  }
+
+  .main--product-card .description__play {
+    padding: 24px 0 23px 0;
+  }
+
+  .main--product-card .note__title {
+    padding-top: 3px;
+  }
+
+  .sort-rezult-button {
+    display: none;
+  }
+
+  .main--product-card .sort-rezult-button {
+    display: block;
+    text-align: left;
+  }
+
+  .main--product-card .video .wrapper {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .main--product-card .video {
+    padding-top: 29px;
+  }
+
+  .main--product-card .description__play {
+    width: auto;
+  }
+
+  .main--product-card .play-text {
+    padding-right: 30px;
+  }
 }

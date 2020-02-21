@@ -245,7 +245,7 @@
 
     </header>
 
-    <main>
+    <main class="film-card">
       <div class="wrapper  wrapper--musicset-card">
         <div class="breadcrumbs breadcrumbs--music-card">
           <a href="./index.html">Главная</a>
@@ -279,7 +279,18 @@
                 <button>Текст песни</button>
                 <button>Видео</button>
               </div>
-              <div class="play-player"></div>
+              <div class="player">
+                <audio src="./audio/europe.mp3" class="track"></audio>     
+                <div class="player__controls">
+                  <div class="player__button toggle-play"></div>
+                  <div class="progress">
+                    <span class="progress__time time-accum">00:00</span>
+                    <div class="progress__filled"></div>
+                    <span class="progress__time time-residue"></span>
+                  </div>
+                  <div class="player__button toggle-volume"></div>
+                </div>            
+              </div>
 
             </div>
             <div class="description__order">
@@ -294,7 +305,7 @@
                       <label for="pdf">.pdf</label>
                     </div>
                     <div class="input-prices">
-                      <span class="input-new-price">250 р.</span>
+                      <span class="input-new-price">1 899 р.</span>
                     </div>
                   </div>
 
@@ -304,7 +315,7 @@
                       <label for="midi">.pdf, .midi</label>
                     </div>
                     <div class="input-prices">
-                      <span class="input-new-price">430 р.</span>
+                      <span class="input-new-price">2 600 р.</span>
                     </div>
                   </div>
 
@@ -314,7 +325,7 @@
                       <label for="all-format">.pdf, .midi, .finale(ред.)</label>
                     </div>
                     <div class="input-prices">
-                      <span class="input-new-price">703 р.</span>
+                      <span class="input-new-price">3 150 р.</span>
                     </div>
                   </div>
 
