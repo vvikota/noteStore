@@ -125,7 +125,12 @@
   background-color: #d7d7d7;
 }
 
-.progress,
+.progress__filled{
+  width: 0;
+  height: 100%;
+  background-color: #959595;
+}
+
 .player__button{
   cursor: pointer;
 }
@@ -148,9 +153,26 @@
 }
 
 .toggle-volume{
+  position: relative;
   width: 18px;
   height: 18px;
   background-image: url('../img/volume-toggle.png');
+}
+
+.toggle-volume:after{
+  display: none;
+  position: absolute;
+  content: "";
+  top: -3px;
+  left: 7px;
+  width: 2px;
+  height: 25px;
+  transform: rotate(-45deg);
+  background-color: red;
+}
+
+.toggle-volume.volume-off:after{
+  display: block;
 }
 // end PLAYER
 
