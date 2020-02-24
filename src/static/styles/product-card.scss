@@ -302,6 +302,15 @@
   }
 }
 
+
+@media screen and (max-width: 768px){
+  
+  .main--product-card .wrapper--recently{
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
 @media screen and (max-width: 500px){
   .main--product-card .breadcrumbs--music-card span {
     display: inline; 
