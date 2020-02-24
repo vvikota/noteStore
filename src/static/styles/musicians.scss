@@ -6,7 +6,6 @@
   display: flex;
   float: left;
   flex-direction: column;
-  margin-bottom: 87px;
   margin-right: calc((100% - 740px)/3);
 }
 
@@ -175,7 +174,7 @@
 .selection-button{
   position: relative;
   width: 120px;
-  padding-left: 20px;
+  padding-left: 10px;
   font-size: 14px;
   cursor: pointer;
   color: #191919;
@@ -188,7 +187,7 @@
   width: 11px;
   height: 5px;
   top: 17px;
-  right: 14px;
+  right: 7px;
   background: url('../img/select-arrow.png') no-repeat;
 }
 
@@ -402,7 +401,13 @@
 .rezult-area{
   margin-bottom: 38px;
   padding-top: 40px;
+  overflow: hidden;
 }
+
+.rezult-area .wrapper{
+  margin-top: -39px;
+}
+
 
 .rezult-area:after,
 .musician-card-wrapper:after{
@@ -479,7 +484,7 @@
   .search-area,
   .selection-area,
   .range-price-area,
-  .only-free-checkbox {
+  .checkbox-area {
     margin-bottom: 10px;
   }
 
@@ -490,7 +495,7 @@
   .search-area,
   .selection-area,
   .range-price-area,
-  .only-free-checkbox{
+  .checkbox-area{
   margin-right: 15px;
   }
 }
@@ -509,13 +514,13 @@
     padding-top: 30px;
   }
 
-  .rezult-item,
-  .rezult-item:nth-last-child(-n+4){
-    margin-bottom: 59px;
+  .sort-rezult .wrapper {
+    flex-wrap: wrap;
   }
 
-  .rezult-item:nth-last-child(1){
-    margin-bottom: 0;
+  .sort-rezult-keys{
+    order: 3;
+    margin-top: 10px;
   }
 }
 
@@ -575,6 +580,10 @@
   .bottom-page-description p:last-child {
     margin-bottom: 0;
   }
+
+  .selection-button:after {
+    right: 14px;
+  }
 }
 
 @media screen and (max-width: 685px) {
@@ -585,15 +594,6 @@
 
   .rezult-item:nth-child(2n){
     margin-right: 0;
-  }
-
-  .rezult-item,
-  .rezult-item:nth-last-child(1){
-    margin-bottom: 59px;
-  }
-
-  .rezult-item:nth-last-child(-n + 2){
-    margin-bottom: 0;
   }
 
   .sort-rezult .wrapper {
@@ -693,7 +693,6 @@
   .rezult-item,
   .rezult-item:nth-last-child(-n+4){
     flex-direction: row;
-    margin-bottom: 27px;
   }
 
   .rezult-item:last-child{

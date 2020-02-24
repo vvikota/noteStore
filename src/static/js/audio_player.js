@@ -53,6 +53,7 @@ track.onloadedmetadata = function () {
       method === 'play' ? (autoPlay = setInterval(showTimer, 1000)) :
         clearInterval(autoPlay);
     } else if (toggleVolume.is(event.target)){
+
       if(toggleVolume.hasClass('volume-off')){
         toggleVolume.removeClass('volume-off');
         track.volume = 1;
