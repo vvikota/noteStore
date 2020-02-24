@@ -50,12 +50,24 @@
 }
 
 .text-undetail a {
+  position: relative;
+  padding-left: 5px;
   color: #5897c4;
   text-decoration: none;
 }
 
+.text-undetail a:after {
+  position: absolute;
+  content: " ,"
+}
+
 .text-undetail__instruments a:last-child {
   border-bottom: 1px dashed #5897c4;
+}
+
+.text-undetail__instruments a:last-child:after,
+.text-undetail__genre a:last-child:after {
+  content: "";
 }
 
 .text-about {
@@ -104,7 +116,7 @@
   width: 400px;
   margin-left: 6px;
   padding-top: 24px;
-
+  padding-bottom: 25px;
 }
 
 .description__order {
@@ -135,10 +147,7 @@
 }
 
 .input-item input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-  margin: 10px 0 0 7px;
+  display: none;
 }
 
 .input-item input+label {

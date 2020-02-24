@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <title>Music portal</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="./libs/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./libs/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="./libs/JQUI/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="./libs/mCustomScrollbar/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="log"></a>
+    <span class="contact">Поддержка: +7 (495) 268 04 96</span>
+    <a href="#" class="back">Вернуться к покупкам</a>
+  </header>
+  <main>
+    <h1>Моя корзина</h1>
+    <section class="product">
+    <div class="collection-contents wrapper">
+      <h2 class="collection-contents__title">Содержание сборника</h2>
+      <div class="collection-contents__table">
+
+        <div class="table-row table-row--head">
+          <div class="table-cell h-cell">Товар</div>
+          <div class="table-sub-row">
+            <div class="table-cell h-cell">Цена</div>
+            <div class="table-cell h-cell"></div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-cell cell">
+            <div class="collection-item">
+              <a href="#"><img src="./img/alekseev1.jpg" alt="pic" class="item-img"></a>
+              <div class="item-description">
+                <a href="#" class="item-description-name">Alekseev - Пьяное солнце, 2017</a>
+                <span class="item-description-instrument">Вокал и пианино</span>
+                <span class="item-description-format">.pdf, .midi, .finale (ред.)</span>
+              </div>
+            </div>
+          </div>
+          <div class="table-sub-row">
+            <div class="table-cell cell"><span>Цена без скидки:</span> <div>3 150 р.</div></div>
+            <div class="table-cell cell"><span>Скидка:</span> Удалить</div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-cell cell">
+            <div class="collection-item">
+              <a href="#"> <img src="./img/musicians_3.jpg" alt="pic" class="item-img"></a>
+              <div class="item-description">
+                <a href="#" class="item-description-name">Lynyrd Skynyrd - Gimme Three Steps, 1984</a>
+                <span class="item-description-instrument">Вокал и пианино</span>
+                <span class="item-description-format">.pdf</span>
+              </div>
+            </div>
+          </div>
+          <div class="table-sub-row">
+            <div class="table-cell cell"> <span>Цена без скидки:</span> <div>999 р.</div></div>
+            <div class="table-cell cell"><span>Скидка:</span> Удалить</div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <div class="table-cell cell">
+            <div class="collection-item">
+              <a href="#"> <img src="./img/jazMan.jpg" alt="pic" class="item-img"></a>
+              <div class="item-description">
+                <a href="#" class="item-description-name">Нотный набор - Лучшие джазовые исполнители</a>
+                <span class="item-description-instrument">Вокал и пианино</span>
+                <span class="item-description-format">.pdf, .midi, .finale (ред.)</span>
+              </div>
+            </div>
+          </div>
+          <div class="table-sub-row">
+            <div class="table-cell cell"><span>Цена без скидки:</span> <div>8 210 р.</div></div>
+            <div class="table-cell cell"><span>Скидка:</span>Удалить</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="payment">
+      <h3>Оплата и получение</h3>
+      <p>
+        Что бы получить выбранные ноты введите, пожалуйста, ваш e-mail. На данный e-mail мы отправим ноты и все дополнительные файлы в течении 5 минут после оплаты.
+      </p>
+
+      <form>
+       
+        <label for="mail">E-mail для получения<span class="necessarily">*</span>
+          <span class="order__form-hint">Укажите email</span>
+        </label>
+
+        <input type="text" id="mail" class="js-empty">
+
+        <button type="submit">Перейти к оплате</button>
+
+        <label class="order__form-checkbox">
+          <input type="checkbox" class="js-empty">
+          <p>Нажимая на кнопку Подписаться, я даю<br>
+            <a class="order__form-checkbox-link">согласие на обработку персональных данных</a>
+          </p>
+        </label>
+
+      </form>
+    </div>
+  </section>
+  </main>
+  <footer>
+    <!-- =include ./component/navMenu.html -->
+  </footer>
+</body>
+
+</html>
