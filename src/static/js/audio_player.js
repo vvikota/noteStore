@@ -1,3 +1,5 @@
+if($('.player ').length){
+
 var playButton = $('.toggle-play');
 var track = $('.track')[0];
 var accumTime = $('.time-accum');
@@ -64,3 +66,4 @@ track.onloadedmetadata = function () {
     }
   })
 };
+}

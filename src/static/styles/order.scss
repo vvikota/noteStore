@@ -213,7 +213,7 @@
     display: block;
   }
 
-  &-checkbox span{
+  &-checkbox-link{
     color: #40a1c5;
     border-bottom: 1px solid #40a1c5;
   }
@@ -483,10 +483,6 @@
     padding-right: 30px;
   }
 
-  .description__list li{
-    white-space: nowrap;
-  }
-
   .order .wrapper--order:after{
     display: none;
   }
@@ -502,7 +498,7 @@
 
   .order__description{
     padding-left: 25px;
-    padding-right: 25px;
+    padding-right: 0;
   }
 
   .order__form{
