@@ -1,4 +1,4 @@
-.main--film-card .note__sorting{
+.main--film-card .note__sorting {
   display: none;
 }
 
@@ -7,7 +7,7 @@
   padding-bottom: 25px;
 }
 
-.main--film-card .play-text{
+.main--film-card .play-text {
   margin-bottom: 27px;
 }
 
@@ -16,7 +16,7 @@
   padding-bottom: 19px;
 }
 
-.main--film-card  .order-form {
+.main--film-card .order-form {
   margin-top: 8px;
 }
 
@@ -33,11 +33,15 @@
   margin-top: 27px;
 }
 
-.main--film-card  .double__slider .slick-arrow{
+.main--film-card .double__slide .rezult-item {
+  min-height: 311px;
+}
+
+.main--film-card .double__slider .slick-arrow {
   top: -39px;
 }
 
-.main--film-card  .double__slider .slick-dots{
+.main--film-card .double__slider .slick-dots {
   bottom: -43px;
 }
 
@@ -49,3 +53,73 @@
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 1000px) {
+  .main--film-card .sort-rezult-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .main--film-card .sort-rezult-button {
+    display: none;
+  }
+
+  .main--film-card .description__play {
+    padding-top: 23px;
+  }
+
+  .main--film-card .play-text {
+    margin-bottom: 16px;
+  }
+
+  .main--film-card .description__order {
+    border-top: 1px solid #ebebeb;
+  }
+
+  .main--film-card .double__slide .rezult-item {
+    min-height: 285px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+
+  .main--film-card .video .wrapper,
+  .main--film-card .recently-watched .wrapper {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main--film-card .description__play {
+    margin: 0 auto;
+  }
+
+  .main--film-card .player__controls{
+    width: 275px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .main--film-card .progress {
+    width: 195px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main--film-card .double__slide .rezult-item {
+    min-height: auto;
+    margin-right: 0;
+    width: 265px;
+  }
+
+  .main--film-card .double__slide {
+    width: auto;
+  }
+
+  .main--film-card .artist-note {
+    padding-bottom: 23px;
+  }
+
+  
+}

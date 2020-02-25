@@ -6,7 +6,8 @@
   
 }
 
-.description__img{
+.main--product-card .description__img,
+.main--film-card .description__img{
   width: 100%;
   height: 100%;
 }
@@ -281,6 +282,9 @@
     padding-bottom: 15px;
   }
 
+  .play-text {
+    padding-right: 0;
+  }
 }
 
 @media screen and (max-width: 900px){
