@@ -39,7 +39,7 @@
   color: #000000;
 }
 
-.basket-main__table {
+.basket-main__order {
   display: flex;
   justify-content: space-between;
 }
@@ -180,4 +180,32 @@
 
 .basket-main__agreement .order__form-checkbox input{
   display: none;
+}
+
+.basket-main .order-table {
+  width: 65%;
+}
+
+.order-table .table-row{
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-table .table-row .table-cell:first-child{
+  width: 90px;
+}
+
+.order-table .table-sub-row{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.order-table .table-sub-row .table-cell:first-child{
+  padding-left: 25px;
+}
+
+.table-mini-row{
+  display: flex;
+  justify-content: space-between;
 }

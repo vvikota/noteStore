@@ -66,15 +66,22 @@
   text-decoration: none;
 }
 
-.breadcrumbs a:after{
-  position: absolute;
-  content: "→";
-  right: 0px;
+.breadcrumbs span{
   color: #252525;
 }
 
-.breadcrumbs span{
+.breadcrumbs a:after{
+  position: absolute;
+  content:"→";
+  width: 19px;
+  height: 13px;
   color: #252525;
+  padding-left: 3px;
+  padding-bottom: 5px;
+}
+
+.breadcrumbs a:first-child:before{
+  display: none;
 }
 
 .top-description-text{
