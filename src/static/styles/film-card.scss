@@ -79,6 +79,10 @@
   .main--film-card .double__slide .rezult-item {
     min-height: 285px;
   }
+
+  .main--film-card .recently-watched{
+    padding-bottom: 37px;
+  }
 }
 
 @media screen and (max-width: 765px) {
@@ -87,6 +91,16 @@
   .main--film-card .recently-watched .wrapper {
     padding-right: 25px;
     padding-left: 25px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main--film-card .recently-watched .slick-arrow {
+    top: 85px; 
+  }
+
+  .main--film-card .similar__title {
+    font-family: Roboto,sans-serif;
   }
 }
 
@@ -104,22 +118,71 @@
   .main--film-card .progress {
     width: 195px;
   }
+
+  .main--film-card .description__play {
+    width: auto;
+  }
+
+  .main--film-card .play-text{
+    width: 245px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
 }
 
 @media screen and (max-width: 450px) {
+  .main--film-card .breadcrumbs span{
+    display: inline;
+  }
+  
   .main--film-card .double__slide .rezult-item {
     min-height: auto;
     margin-right: 0;
+    margin-bottom: 20px;
     width: 265px;
   }
-
+  
   .main--film-card .double__slide {
     width: auto;
   }
 
   .main--film-card .artist-note {
-    padding-bottom: 23px;
+    padding-bottom: 3px;
   }
 
-  
+  .main--film-card .description__play {
+    padding-bottom: 19px;
+  }
+
+  .main--film-card .play-text {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .main--film-card .description__order {
+    padding-bottom: 15px;
+  }
+
+  .main--film-card .note__title {
+    margin-top: 24px;
+  }
+
+  .main--film-card .sort-rezult-button {
+    display: block;
+    text-align: left;
+  }
+
+  .main--film-card .video {
+    padding-top: 30px;
+    padding-bottom: 32px;
+  }
+
+  .main--film-card .recently-watched {
+    padding-bottom: 29px;
+  }
+
+  .main--film-card .recently-watched .slick-dots {
+    bottom: -29px; 
+  }
+
 }
