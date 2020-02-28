@@ -32,6 +32,8 @@
 }
 
 .basket-main h1 {
+  margin-top: 60px;
+  margin-bottom: 48px;
   font-family: Roboto, sans-serif;
   font-size: 26px;
   font-weight: 400;
@@ -184,28 +186,56 @@
 
 .basket-main .order-table {
   width: 65%;
+  font-family: Roboto, sans-serif;
 }
 
 .order-table .table-row{
   display: flex;
-  justify-content: space-between;
-}
-
-.order-table .table-row .table-cell:first-child{
-  width: 90px;
+  flex-direction: row;
+  padding-top: 28px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .order-table .table-sub-row{
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 55%;
 }
 
-.order-table .table-sub-row .table-cell:first-child{
-  padding-left: 25px;
+.order-table .table-sub-row .h-cell:first-child{
+  padding-left: 82px;
 }
 
-.table-mini-row{
+.order-table .table-sub-row .cell:first-child{
+  padding-left: 82px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #111111;
+}
+
+.order-table .table-sub-row .cell:nth-child(2){
+  padding-right: 5px;
+  font-size: 13px;
+  color: #a5a5a5;
+}
+
+.order-table .table-row > .cell,
+.order-table .table-row > .h-cell{
   display: flex;
-  justify-content: space-between;
+  width: 45%;
+}
+
+.order-table .item-description {
+  width: 100%;
+}
+
+.order-table .h-cell{
+  font-size: 14px;
+  line-height: 26px;
+  color: #707070;
+}
+
+.order-table .table-row:first-child{
+  padding-bottom: 6px;
 }
