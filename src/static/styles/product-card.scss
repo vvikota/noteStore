@@ -219,25 +219,10 @@
   background-color: #f6f6f6;
 }
 
-.video .wrapper{
-  padding-left: 170px;
-  padding-right: 170px;
-}
-
 .video .video-container{
   position: relative;
-  height: 0;
-  padding-bottom: 56.25%;
+  text-align: center;
   padding-top: 30px;
-  overflow: hidden;
-}
-
-.video iframe{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .lyrics{
@@ -284,6 +269,12 @@
 
   .play-text {
     padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .video iframe{
+    width: 100%;
   }
 }
 
@@ -362,6 +353,10 @@
 
   .recently-watched--product-card .slick-dots{
     bottom: -38px;
+  }
+
+  .video iframe{
+    max-height: 352px;
   }
 }
 
@@ -447,5 +442,9 @@
 
   .recently-watched--product-card {
     padding-bottom: 37px;
+  }
+  
+  .video iframe{
+    max-height: 250px;
   }
 }
