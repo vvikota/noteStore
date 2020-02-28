@@ -9,3 +9,4 @@
   //=include musicset-card.js
   //=include product-card.js
   //=include audio_player.js
+  //=include basket.js
