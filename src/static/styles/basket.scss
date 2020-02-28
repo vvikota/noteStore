@@ -33,7 +33,7 @@
 
 .basket-main h1 {
   margin-top: 60px;
-  margin-bottom: 48px;
+  margin-bottom: 20px;
   font-family: Roboto, sans-serif;
   font-size: 26px;
   font-weight: 400;
@@ -48,8 +48,9 @@
 
 .basket-main__payment {
   width: 360px;
+  margin-top: 60px;
   box-sizing: border-box;
-  padding: 5px 40px;
+  padding: 5px 30px 25px 30px;
   font-family: Roboto, sans-serif;
   border: 1px solid #dfdfdf;
   background-color: #f6f6f6;
@@ -250,4 +251,14 @@
 
 .delete-product{
   cursor: pointer;
+}
+
+.basket-main .recently-watched{
+  background-color: #ededed;
+  margin-top: 40px;
+  padding-bottom: 45px;
+}
+
+.basket-main .recently-watched .slick-dots {
+  bottom: -35px;
 }
